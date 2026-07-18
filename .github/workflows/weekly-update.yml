@@ -1,7 +1,5 @@
 name: Weekly algae feed update
 
-# Runs every Thursday at 20:00 UTC (~Friday morning AEST), just after
-# Goulburn-Murray Water's weekly refresh. Also runnable on demand.
 on:
   schedule:
     - cron: '0 20 * * 4'
@@ -39,9 +37,4 @@ jobs:
           else
             echo "No change to data.json"
           fi
-
-      # If Netlify is set to auto-deploy from this repo, the push above is
-      # enough. If you deploy manually, add a Netlify build hook as the secret
-      # NETLIFY_BUILD_HOOK and uncomment the step below.
-      # - name: Trigger Netlify build
-      #   run: curl -fsSL -X POST "${{ secrets.NETLIFY_BUILD_HOOK }}"
+          
