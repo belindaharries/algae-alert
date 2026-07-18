@@ -1,0 +1,25 @@
+{
+  "updated": "2026-07-18",
+  "updatedLabel": "18 July 2026",
+  "nextUpdate": "25 July 2026",
+  "warnings": [
+    {"name":"Lake Eildon","region":"Goulburn catchment","authority":"Goulburn-Murray Water","authorityUrl":"https://www.g-mwater.com.au/bluegreenalgae-alert/","level":"red","status":"Warning — high blue-green algae levels detected. Avoid contact with the water, use alternative supplies for stock, and keep pets away.","updated":"23 Mar 2026","lat":-37.23,"lng":145.91},
+    {"name":"Lake Eppalock","region":"Campaspe catchment","authority":"Goulburn-Murray Water","authorityUrl":"https://www.g-mwater.com.au/bluegreenalgae-alert/","level":"red","status":"Warning — high blue-green algae levels detected. Avoid contact with the water, use alternative supplies for stock, and keep pets away.","updated":"30 Mar 2026","lat":-36.88,"lng":144.55},
+    {"name":"Tullaroop Reservoir","region":"Loddon catchment","authority":"Goulburn-Murray Water","authorityUrl":"https://www.g-mwater.com.au/bluegreenalgae-alert/","level":"red","status":"Warning — high blue-green algae levels detected. Avoid contact with the water, use alternative supplies for stock, and keep pets away.","updated":"22 Jan 2026","lat":-37.13,"lng":143.79},
+    {"name":"Hepburns Lagoon","region":"Central Highlands","authority":"Goulburn-Murray Water","authorityUrl":"https://www.g-mwater.com.au/bluegreenalgae-alert/","level":"red","status":"Warning — avoid contact with the water, including the Hepburns Race.","updated":"13 Nov 2025","lat":-37.43,"lng":143.99}
+  ],
+  "sources": [
+    {"authority":"Goulburn-Murray Water","area":"Northern Victoria — lakes, weirs & channels","status":"warnings","count":4,"url":"https://www.g-mwater.com.au/bluegreenalgae-alert/","note":"Weekly updates, usually Thursdays."},
+    {"authority":"GWMWater","area":"Wimmera & Mallee — recreational lakes","status":"clear","count":0,"url":"https://www.gwmwater.org.au/using-lakes-and-reservoirs/rec-algae-warnings","note":"No current warnings at last check."},
+    {"authority":"Lower Murray Water","area":"Sunraysia & north-west","status":"clear","count":0,"url":"https://www.lmw.vic.gov.au/water-supply-and-services/water-quality-and-treatment/blue-green-algae/","note":"No current warnings at last check."},
+    {"authority":"Southern Rural Water","area":"Gippsland & southern Victoria storages","status":"clear","count":0,"url":"https://www.srw.com.au/water-and-storage/warnings/blue-green-algae","note":"No current warnings at last check."},
+    {"authority":"Melbourne Water","area":"Greater Melbourne waterways (e.g. Patterson Lakes, Yarra)","status":"manual","count":0,"url":"https://www.melbournewater.com.au/","note":"Metro alerts are published as individual news notices, not a single list."},
+    {"authority":"Gippsland Lakes (coastal)","area":"East Gippsland — the coastal lakes system","status":"manual","count":0,"url":"https://www.water.vic.gov.au/waterways/blue-green-algae","note":"Seasonal summer blooms, coordinated by EPA Victoria and DEECA."},
+    {"authority":"Local councils","area":"Council-managed town & recreational lakes","status":"manual","count":0,"url":"https://www.health.vic.gov.au/water/blue-green-algae-management","note":"Some councils (e.g. Lake Bolac, Lake Victoria) issue their own warnings."}
+  ],
+  "news": [
+    {"title":"Goulburn-Murray Water has 4 lakes under an active warning (Eildon, Eppalock, Tullaroop, Hepburns Lagoon)","source":"Goulburn-Murray Water","date":"17 Jul 2026","url":"https://www.g-mwater.com.au/bluegreenalgae-alert/"},
+    {"title":"Southern Rural Water, GWMWater and Lower Murray Water report no current warnings","source":"Water corporations","date":"17 Jul 2026","url":"https://www.srw.com.au/water-and-storage/warnings/blue-green-algae"},
+    {"title":"Media coverage of Victorian blooms appears here automatically after each weekly update","source":"Weekly feed","date":"","url":"https://www.water.vic.gov.au/waterways/blue-green-algae"}
+  ]
+}

@@ -1,0 +1,49 @@
+VICTORIAN COUNCILS — BLUE-GREEN ALGAE WARNINGS
+==============================================
+All 79 Victorian councils were checked. Most do NOT issue their own
+warnings — for the majority of lakes and reservoirs the warning comes from
+a water corporation (Goulburn-Murray Water, GWMWater, Lower Murray Water,
+Southern Rural Water, Coliban Water, Barwon Water) rather than the council.
+
+The councils below DO issue their own warnings for lakes they manage. Their
+lakes are pre-loaded into the scraper's GEOCODE table, so a news mention
+pins accurately. (Confidence noted where the warning was seen directly vs.
+inferred from a council page.)
+
+GREATER MELBOURNE
+- Casey ....... Wilson Botanic Park Lake, Berwick (dedicated BGA page) [high]
+- Darebin ..... Edwardes Lake, Reservoir (council algal-bloom page) [high]
+- Knox ........ Quarry Lake, Ferntree Gully (water-quality page) [high]
+- Nillumbik ... Yarrambat Lake (permanent BGA signage) [high]
+- Whitehorse .. Blackburn Lake & Surrey Dive (dedicated BGA page) [high]
+- Hume ........ Spavin Lake, Sunbury (council update) [high]
+- Yarra Ranges  Lillydale Lake (council no-swim advice) [high]
+- Glen Eira ... Caulfield Park Lake (prevention page, no active warning) [medium]
+
+REGIONAL CITIES
+- Ballarat ......... Lake Burrumbeet, Lake Wendouree [high]
+- Greater Geelong .. Balyang Sanctuary, Eastern Park Lake, Blue Waters Lake
+                     (Ocean Grove), Lake Lorne (Drysdale), St Leonards Lake
+                     (council BGA page) [high]
+- Greater Shepparton Kialla Lakes, Lake Bartlett (Tatura), Craigmuir Lake [high]
+- Horsham ......... Green Lake, Wimmera waterways [high]
+- Greater Bendigo . Lake Neangar, Eaglehawk [medium]
+- Warrnambool ..... Lake Pertobe [medium]
+
+RURAL SHIRES
+- Central Goldfields  Lake Victoria, Maryborough [high]
+- West Wimmera ...... Lake Wallace, Edenhope [high]
+- Ararat ............ Lake Bolac, Green Hill Lake [high]
+- Southern Grampians  Lake Hamilton [high]
+- Wellington ........ Lake Guthridge, Sale [high]
+- Swan Hill ......... Lake Boga [high]
+
+WORTH WATCHING (council role indicated, warning not directly confirmed)
+- Buloke — has a Municipal Blue-Green Algae Management Plan
+- Hepburn — Lake Daylesford / Jubilee Lake (social posts)
+- Colac Otway — Lake Colac (social posts)
+
+Everything else: warnings handled by the water corporations, already
+covered by the scraper's source list. The generic council news query still
+catches any council warning that reaches the media, so a council not listed
+here will still surface if it issues one.

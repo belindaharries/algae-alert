@@ -1,0 +1,13 @@
+{
+  "name": "bga-victoria-scraper",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Weekly blue-green algae feed builder for the Victoria alert map",
+  "scripts": {
+    "update": "node scrape.js"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0"
+  }
+}
