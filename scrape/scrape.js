@@ -54,13 +54,33 @@ const coordsFor = (name) => GEOCODE[name.trim().toLowerCase()] || [null, null];
 
 /* The monitored-sources panel. Status/count get refreshed from the scrape. */
 const SOURCES = [
-  {authority:'Goulburn-Murray Water', area:'Northern Victoria — lakes, weirs & channels', url:'https://www.g-mwater.com.au/bluegreenalgae-alert/', scrape:'gmw'},
-  {authority:'GWMWater', area:'Wimmera & Mallee', url:'https://www.gwmwater.org.au/using-lakes-and-reservoirs/rec-algae-warnings', scrape:'phrase'},
-  {authority:'Lower Murray Water', area:'Sunraysia & north-west', url:'https://www.lmw.vic.gov.au/water-supply-and-services/water-quality-and-treatment/blue-green-algae/', scrape:'phrase'},
-  {authority:'Southern Rural Water', area:'Gippsland & southern storages', url:'https://www.srw.com.au/water-and-storage/warnings/blue-green-algae', scrape:'phrase'},
-  {authority:'Melbourne Water', area:'Greater Melbourne waterways', url:'https://www.melbournewater.com.au/', scrape:'manual'},
-  {authority:'Gippsland Lakes (coastal)', area:'East Gippsland — coastal lakes', url:'https://www.water.vic.gov.au/waterways/blue-green-algae', scrape:'manual'},
-  {authority:'Local councils', area:'Council-managed town lakes', url:'https://www.health.vic.gov.au/water/blue-green-algae-management', scrape:'manual'}
+  // Water corporations & agencies
+  {authority:'Goulburn-Murray Water', area:'Northern Victoria — lakes, weirs & channels', url:'https://www.g-mwater.com.au/bluegreenalgae-alert/', scrape:'gmw', kind:'corp'},
+  {authority:'GWMWater', area:'Wimmera & Mallee', url:'https://www.gwmwater.org.au/using-lakes-and-reservoirs/rec-algae-warnings', scrape:'phrase', kind:'corp'},
+  {authority:'Lower Murray Water', area:'Sunraysia & north-west', url:'https://www.lmw.vic.gov.au/water-supply-and-services/water-quality-and-treatment/blue-green-algae/', scrape:'phrase', kind:'corp'},
+  {authority:'Southern Rural Water', area:'Gippsland & southern storages', url:'https://www.srw.com.au/water-and-storage/warnings/blue-green-algae', scrape:'phrase', kind:'corp'},
+  {authority:'Melbourne Water', area:'Greater Melbourne waterways', url:'https://www.melbournewater.com.au/', scrape:'manual', kind:'corp'},
+  {authority:'Gippsland Lakes (coastal)', area:'East Gippsland — coastal lakes', url:'https://www.water.vic.gov.au/waterways/blue-green-algae', scrape:'manual', kind:'corp'},
+  // Councils verified as issuing their own warnings (watched via news)
+  {authority:'City of Ballarat', area:'Lake Burrumbeet, Lake Wendouree', url:'https://www.ballarat.vic.gov.au/news/blue-green-algae-closes-lake-burrumbeet', scrape:'manual', kind:'council'},
+  {authority:'City of Casey', area:'Wilson Botanic Park Lake, Berwick', url:'https://www.casey.vic.gov.au/blue-green-algae', scrape:'manual', kind:'council'},
+  {authority:'Central Goldfields Shire', area:'Lake Victoria, Maryborough', url:'https://www.centralgoldfields.vic.gov.au/Whats-Happening/Latest-News/Media-Releases/BLUE-GREEN-ALGAE-BGA-WARNING-FOR-LAKE-VICTORIA', scrape:'manual', kind:'council'},
+  {authority:'Darebin City', area:'Edwardes Lake, Reservoir', url:'https://www.darebin.vic.gov.au/Waste-environment-and-climate/Natural-environment/Algal-blooms-at-Edwardes-Lake', scrape:'manual', kind:'council'},
+  {authority:'City of Greater Geelong', area:'Balyang, Eastern Park, Blue Waters, Lake Lorne, St Leonards', url:'https://www.geelongaustralia.com.au', scrape:'manual', kind:'council'},
+  {authority:'Greater Shepparton City', area:'Kialla Lakes, Lake Bartlett, Craigmuir Lake', url:'https://greatershepparton.com.au', scrape:'manual', kind:'council'},
+  {authority:'Hume City', area:'Spavin Lake, Sunbury', url:'https://www.hume.vic.gov.au', scrape:'manual', kind:'council'},
+  {authority:'Knox City', area:'Quarry Lake, Ferntree Gully', url:'https://www.knox.vic.gov.au/our-services/gardens-environment-and-sustainability/quarry-lake-water-quality', scrape:'manual', kind:'council'},
+  {authority:'Nillumbik Shire', area:'Yarrambat Lake', url:'https://www.nillumbik.vic.gov.au/Community/Public-health-and-safety/Blue-green-algae-in-our-waterways', scrape:'manual', kind:'council'},
+  {authority:'Whitehorse City', area:'Blackburn Lake, Surrey Dive', url:'https://www.whitehorse.vic.gov.au/living-working/emergencies/types-emergencies/blue-green-algae', scrape:'manual', kind:'council'},
+  {authority:'Yarra Ranges Council', area:'Lillydale Lake', url:'https://www.yarraranges.vic.gov.au', scrape:'manual', kind:'council'},
+  {authority:'Ararat Rural City', area:'Lake Bolac, Green Hill Lake', url:'https://www.ararat.vic.gov.au/news/blue-green-algae-warning-issued-lake-bolac', scrape:'manual', kind:'council'},
+  {authority:'Horsham Rural City', area:'Green Lake, Wimmera waterways', url:'https://www.hrcc.vic.gov.au/Our-Council/News-and-Media/Latest-News/Green-Lake-algae-warning', scrape:'manual', kind:'council'},
+  {authority:'West Wimmera Shire', area:'Lake Wallace, Edenhope', url:'https://www.westwimmera.vic.gov.au/Council/News-and-media/Latest-News/Blue-green-algae-warning-Lake-Wallace', scrape:'manual', kind:'council'},
+  {authority:'Southern Grampians Shire', area:'Lake Hamilton', url:'https://www.sthgrampians.vic.gov.au', scrape:'manual', kind:'council'},
+  {authority:'Swan Hill Rural City', area:'Lake Boga', url:'https://www.swanhill.vic.gov.au', scrape:'manual', kind:'council'},
+  {authority:'Wellington Shire', area:'Lake Guthridge, Sale', url:'https://www.wellington.vic.gov.au', scrape:'manual', kind:'council'},
+  {authority:'Greater Bendigo City', area:'Lake Neangar, Eaglehawk', url:'https://www.bendigo.vic.gov.au', scrape:'manual', kind:'council'},
+  {authority:'Warrnambool City', area:'Lake Pertobe', url:'https://www.warrnambool.vic.gov.au', scrape:'manual', kind:'council'}
 ];
 
 async function getHtml(url){
@@ -202,12 +222,12 @@ async function main(){
       if(src.scrape==='gmw'){
         const w = await scrapeGMW(src);
         warnings.push(...w);
-        sourcesOut.push({authority:src.authority, area:src.area, url:src.url, status: w.length?'warnings':'clear', count:w.length});
+        sourcesOut.push({authority:src.authority, area:src.area, url:src.url, kind:src.kind, status: w.length?'warnings':'clear', count:w.length});
       } else if(src.scrape==='phrase'){
         const status = await scrapePhrase(src);
-        sourcesOut.push({authority:src.authority, area:src.area, url:src.url, status: status==='clear'?'clear':'manual', count:0});
+        sourcesOut.push({authority:src.authority, area:src.area, url:src.url, kind:src.kind, status: status==='clear'?'clear':'manual', count:0});
       } else {
-        sourcesOut.push({authority:src.authority, area:src.area, url:src.url, status:'manual', count:0});
+        sourcesOut.push({authority:src.authority, area:src.area, url:src.url, kind:src.kind, status:'manual', count:0});
       }
     }catch(e){
       console.warn(`[${src.authority}] ${e.message}`);
