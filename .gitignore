@@ -1,0 +1,6 @@
+.DS_Store
+scrape/node_modules/
+scrape/package-lock.json
+build/*.png
+build/*.cjs
+build/*.mjs

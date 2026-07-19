@@ -1,0 +1,1060 @@
+{
+  "generated": "2026-07-18",
+  "coverage_years": [
+    2020,
+    2026
+  ],
+  "coverage_note": "Reconstructed from dated authority notices, government reports and news for 2020–2026. Earlier years and less-publicised lakes are under-counted; treat counts as a floor, not a census.",
+  "totals": {
+    "events": 63,
+    "waterbodies": 33,
+    "undated_known_blooms": 1,
+    "events_with_known_duration": 17
+  },
+  "trend_by_year": {
+    "2020": 4,
+    "2021": 2,
+    "2022": 4,
+    "2023": 10,
+    "2024": 13,
+    "2025": 23,
+    "2026": 7
+  },
+  "season_histogram": {
+    "summer": 26,
+    "autumn": 28,
+    "winter": 3,
+    "spring": 6
+  },
+  "month_histogram": {
+    "Jan": 11,
+    "Feb": 10,
+    "Mar": 12,
+    "Apr": 9,
+    "May": 7,
+    "Jun": 0,
+    "Jul": 2,
+    "Aug": 1,
+    "Sep": 0,
+    "Oct": 2,
+    "Nov": 4,
+    "Dec": 5
+  },
+  "heatmap_year_month": {
+    "2020": [
+      0,
+      2,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      2,
+      1
+    ],
+    "2021": [
+      2,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0,
+      1
+    ],
+    "2022": [
+      0,
+      0,
+      1,
+      2,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0
+    ],
+    "2023": [
+      5,
+      3,
+      2,
+      2,
+      3,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "2024": [
+      3,
+      2,
+      4,
+      2,
+      4,
+      2,
+      2,
+      0,
+      0,
+      1,
+      0,
+      2
+    ],
+    "2025": [
+      4,
+      5,
+      8,
+      12,
+      5,
+      4,
+      4,
+      4,
+      4,
+      0,
+      3,
+      1
+    ],
+    "2026": [
+      1,
+      2,
+      2,
+      0,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "heatmap_max": 12,
+  "heatmap_months": [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec"
+  ],
+  "duration": {
+    "events_with_end_date": 17,
+    "avg_days": 115,
+    "max_days": 484
+  },
+  "intensity": {
+    "available": false,
+    "note": "Cell-count intensity (cells/mL) is not available: WMIS does not expose cyanobacteria counts and no public notice stated a number. Severity is therefore qualitative (warning vs amber). Add counts here if a future source provides them."
+  },
+  "ranking_by_frequency": [
+    {
+      "waterbody": "Lake Eildon",
+      "events": 5,
+      "years_active": 4
+    },
+    {
+      "waterbody": "Lake Eppalock",
+      "events": 4,
+      "years_active": 4
+    },
+    {
+      "waterbody": "Lake Hume",
+      "events": 4,
+      "years_active": 4
+    },
+    {
+      "waterbody": "Tullaroop Reservoir",
+      "events": 3,
+      "years_active": 3
+    },
+    {
+      "waterbody": "Lake Wallace",
+      "events": 3,
+      "years_active": 3
+    },
+    {
+      "waterbody": "Hepburns Lagoon",
+      "events": 3,
+      "years_active": 2
+    },
+    {
+      "waterbody": "Gippsland Lakes",
+      "events": 3,
+      "years_active": 2
+    },
+    {
+      "waterbody": "Laanecoorie Reservoir",
+      "events": 3,
+      "years_active": 2
+    },
+    {
+      "waterbody": "Green Lake",
+      "events": 3,
+      "years_active": 2
+    },
+    {
+      "waterbody": "Cairn Curran Reservoir",
+      "events": 2,
+      "years_active": 2
+    }
+  ],
+  "ranking_by_duration": [
+    {
+      "waterbody": "Lake Eildon",
+      "max_duration_days": 484
+    },
+    {
+      "waterbody": "Hepburns Lagoon",
+      "max_duration_days": 238
+    },
+    {
+      "waterbody": "Cairn Curran Reservoir",
+      "max_duration_days": 202
+    },
+    {
+      "waterbody": "Tullaroop Reservoir",
+      "max_duration_days": 189
+    },
+    {
+      "waterbody": "Lake Eppalock",
+      "max_duration_days": 160
+    },
+    {
+      "waterbody": "Lake Wallace",
+      "max_duration_days": 85
+    },
+    {
+      "waterbody": "Spavin Lake",
+      "max_duration_days": 75
+    },
+    {
+      "waterbody": "Lake Wellington",
+      "max_duration_days": 44
+    },
+    {
+      "waterbody": "Lake Charm",
+      "max_duration_days": 41
+    },
+    {
+      "waterbody": "Lake Hume",
+      "max_duration_days": 35
+    }
+  ],
+  "waterbodies": [
+    {
+      "waterbody": "Lake Eildon",
+      "lat": -37.23,
+      "lng": 145.91,
+      "region": "Goulburn catchment",
+      "authority": "Goulburn-Murray Water",
+      "event_count": 5,
+      "years_active": [
+        2020,
+        2023,
+        2024,
+        2026
+      ],
+      "years_active_count": 4,
+      "first_seen": "2020-07-01",
+      "last_seen": "2026-03-23",
+      "recurring": true,
+      "avg_duration_days": 170,
+      "max_duration_days": 484,
+      "typical_season": "summer",
+      "typical_months": [
+        "Mar",
+        "Dec"
+      ],
+      "best_confidence": "high"
+    },
+    {
+      "waterbody": "Lake Eppalock",
+      "lat": -36.88,
+      "lng": 144.55,
+      "region": "Campaspe catchment",
+      "authority": "Goulburn-Murray Water",
+      "event_count": 4,
+      "years_active": [
+        2021,
+        2023,
+        2025,
+        2026
+      ],
+      "years_active_count": 4,
+      "first_seen": "2021-01-25",
+      "last_seen": "2026-03-30",
+      "recurring": true,
+      "avg_duration_days": 160,
+      "max_duration_days": 160,
+      "typical_season": "summer",
+      "typical_months": [
+        "Jan",
+        "Apr"
+      ],
+      "best_confidence": "high"
+    },
+    {
+      "waterbody": "Lake Hume",
+      "lat": -36.11,
+      "lng": 147.03,
+      "region": "Upper Murray / VIC-NSW border storage",
+      "authority": "WaterNSW",
+      "event_count": 4,
+      "years_active": [
+        2020,
+        2021,
+        2022,
+        2025
+      ],
+      "years_active_count": 4,
+      "first_seen": "2020-02-24",
+      "last_seen": "2025-09-08",
+      "recurring": true,
+      "avg_duration_days": 26,
+      "max_duration_days": 35,
+      "typical_season": "summer",
+      "typical_months": [
+        "Feb",
+        "Dec"
+      ],
+      "best_confidence": "high"
+    },
+    {
+      "waterbody": "Hepburns Lagoon",
+      "lat": -37.43,
+      "lng": 143.99,
+      "region": "Bullarook Creek / Loddon catchment",
+      "authority": "Goulburn-Murray Water",
+      "event_count": 3,
+      "years_active": [
+        2023,
+        2025
+      ],
+      "years_active_count": 2,
+      "first_seen": "2023-01-26",
+      "last_seen": "2025-11-13",
+      "recurring": false,
+      "avg_duration_days": 238,
+      "max_duration_days": 238,
+      "typical_season": "summer",
+      "typical_months": [
+        "Jan",
+        "Nov"
+      ],
+      "best_confidence": "high"
+    },
+    {
+      "waterbody": "Tullaroop Reservoir",
+      "lat": -37.13,
+      "lng": 143.79,
+      "region": "Loddon catchment",
+      "authority": "Goulburn-Murray Water",
+      "event_count": 3,
+      "years_active": [
+        2023,
+        2025,
+        2026
+      ],
+      "years_active_count": 3,
+      "first_seen": "2023-01-26",
+      "last_seen": "2026-01-22",
+      "recurring": true,
+      "avg_duration_days": 189,
+      "max_duration_days": 189,
+      "typical_season": "summer",
+      "typical_months": [
+        "Jan",
+        "Feb"
+      ],
+      "best_confidence": "high"
+    },
+    {
+      "waterbody": "Lake Wallace",
+      "lat": -37.038,
+      "lng": 141.29,
+      "region": "West Wimmera (Edenhope)",
+      "authority": "West Wimmera Shire Council / GWMWater",
+      "event_count": 3,
+      "years_active": [
+        2023,
+        2024,
+        2025
+      ],
+      "years_active_count": 3,
+      "first_seen": "2023-01-20",
+      "last_seen": "2025-06-12",
+      "recurring": true,
+      "avg_duration_days": 85,
+      "max_duration_days": 85,
+      "typical_season": "autumn",
+      "typical_months": [
+        "Jan",
+        "Mar"
+      ],
+      "best_confidence": "high"
+    },
+    {
+      "waterbody": "Gippsland Lakes",
+      "lat": -37.88,
+      "lng": 147.75,
+      "region": "Gippsland Lakes",
+      "authority": "Department of Energy, Environment and Climate Action (Victoria)",
+      "event_count": 3,
+      "years_active": [
+        2022,
+        2024
+      ],
+      "years_active_count": 2,
+      "first_seen": "2022-04-14",
+      "last_seen": "2024-05-31",
+      "recurring": false,
+      "avg_duration_days": null,
+      "max_duration_days": null,
+      "typical_season": "autumn",
+      "typical_months": [
+        "Apr",
+        "May"
+      ],
+      "best_confidence": "high"
+    },
+    {
+      "waterbody": "Laanecoorie Reservoir",
+      "lat": -36.88,
+      "lng": 143.9,
+      "region": "Central Victoria / Loddon-Campaspe",
+      "authority": "Goulburn-Murray Water",
+      "event_count": 3,
+      "years_active": [
+        2023,
+        2025
+      ],
+      "years_active_count": 2,
+      "first_seen": "2023-01-28",
+      "last_seen": "2025-05-09",
+      "recurring": false,
+      "avg_duration_days": null,
+      "max_duration_days": null,
+      "typical_season": "autumn",
+      "typical_months": [
+        "Jan",
+        "May"
+      ],
+      "best_confidence": "high"
+    },
+    {
+      "waterbody": "Green Lake",
+      "lat": -36.87,
+      "lng": 142.3,
+      "region": "Wimmera / Horsham",
+      "authority": "Horsham Rural City Council",
+      "event_count": 3,
+      "years_active": [
+        2024,
+        2025
+      ],
+      "years_active_count": 2,
+      "first_seen": "2024-03-27",
+      "last_seen": "2025-04-29",
+      "recurring": false,
+      "avg_duration_days": null,
+      "max_duration_days": null,
+      "typical_season": "autumn",
+      "typical_months": [
+        "Mar",
+        "Apr"
+      ],
+      "best_confidence": "high"
+    },
+    {
+      "waterbody": "Cairn Curran Reservoir",
+      "lat": -37.02,
+      "lng": 143.98,
+      "region": "Central Victoria / Loddon-Campaspe",
+      "authority": "Goulburn-Murray Water",
+      "event_count": 2,
+      "years_active": [
+        2024,
+        2025
+      ],
+      "years_active_count": 2,
+      "first_seen": "2024-02-27",
+      "last_seen": "2025-09-04",
+      "recurring": false,
+      "avg_duration_days": 164,
+      "max_duration_days": 202,
+      "typical_season": "summer",
+      "typical_months": [
+        "Feb",
+        "Feb"
+      ],
+      "best_confidence": "high"
+    },
+    {
+      "waterbody": "Spavin Lake",
+      "lat": -37.575,
+      "lng": 144.73,
+      "region": "Sunbury",
+      "authority": "Hume City Council",
+      "event_count": 2,
+      "years_active": [
+        2023,
+        2025
+      ],
+      "years_active_count": 2,
+      "first_seen": "2023-03-01",
+      "last_seen": "2025-02-07",
+      "recurring": false,
+      "avg_duration_days": 53,
+      "max_duration_days": 75,
+      "typical_season": "autumn",
+      "typical_months": [
+        "Jan",
+        "Mar"
+      ],
+      "best_confidence": "high"
+    },
+    {
+      "waterbody": "Lake Lonsdale",
+      "lat": -37.02,
+      "lng": 142.62,
+      "region": "Wimmera catchment (near Stawell)",
+      "authority": "GWMWater",
+      "event_count": 2,
+      "years_active": [
+        2020,
+        2025
+      ],
+      "years_active_count": 2,
+      "first_seen": "2020-11-16",
+      "last_seen": "2025-04-29",
+      "recurring": false,
+      "avg_duration_days": null,
+      "max_duration_days": null,
+      "typical_season": "spring",
+      "typical_months": [
+        "Apr",
+        "Nov"
+      ],
+      "best_confidence": "medium"
+    },
+    {
+      "waterbody": "Taylors Lake",
+      "lat": -36.78,
+      "lng": 142.35,
+      "region": "Wimmera catchment (near Horsham)",
+      "authority": "GWMWater",
+      "event_count": 2,
+      "years_active": [
+        2023,
+        2025
+      ],
+      "years_active_count": 2,
+      "first_seen": "2023-05-17",
+      "last_seen": "2025-04-29",
+      "recurring": false,
+      "avg_duration_days": null,
+      "max_duration_days": null,
+      "typical_season": "autumn",
+      "typical_months": [
+        "Apr",
+        "May"
+      ],
+      "best_confidence": "medium"
+    },
+    {
+      "waterbody": "Lake Bartlett",
+      "lat": -36.44,
+      "lng": 145.23,
+      "region": "Greater Shepparton / Tatura",
+      "authority": "Greater Shepparton City Council",
+      "event_count": 2,
+      "years_active": [
+        2024,
+        2025
+      ],
+      "years_active_count": 2,
+      "first_seen": "2024-01-16",
+      "last_seen": "2025-12-19",
+      "recurring": false,
+      "avg_duration_days": null,
+      "max_duration_days": null,
+      "typical_season": "summer",
+      "typical_months": [
+        "Jan",
+        "Dec"
+      ],
+      "best_confidence": "high"
+    },
+    {
+      "waterbody": "Kialla Lakes",
+      "lat": -36.42,
+      "lng": 145.4,
+      "region": "Greater Shepparton",
+      "authority": "Greater Shepparton City Council",
+      "event_count": 2,
+      "years_active": [
+        2024,
+        2025
+      ],
+      "years_active_count": 2,
+      "first_seen": "2024-03-14",
+      "last_seen": "2025-11-07",
+      "recurring": false,
+      "avg_duration_days": null,
+      "max_duration_days": null,
+      "typical_season": "autumn",
+      "typical_months": [
+        "Mar",
+        "Nov"
+      ],
+      "best_confidence": "high"
+    },
+    {
+      "waterbody": "Lake Boga",
+      "lat": -35.46,
+      "lng": 143.63,
+      "region": "Kerang Lakes / Murray",
+      "authority": "Goulburn-Murray Water",
+      "event_count": 2,
+      "years_active": [
+        2025
+      ],
+      "years_active_count": 1,
+      "first_seen": "2025-03-20",
+      "last_seen": "2025-11-19",
+      "recurring": false,
+      "avg_duration_days": null,
+      "max_duration_days": null,
+      "typical_season": "autumn",
+      "typical_months": [
+        "Mar",
+        "Nov"
+      ],
+      "best_confidence": "high"
+    },
+    {
+      "waterbody": "Lake Victoria",
+      "lat": -37.05,
+      "lng": 143.74,
+      "region": "Central Goldfields (Maryborough)",
+      "authority": "Central Goldfields Shire Council",
+      "event_count": 2,
+      "years_active": [
+        2025,
+        2026
+      ],
+      "years_active_count": 2,
+      "first_seen": "2025-04-04",
+      "last_seen": "2026-05-13",
+      "recurring": false,
+      "avg_duration_days": null,
+      "max_duration_days": null,
+      "typical_season": "autumn",
+      "typical_months": [
+        "Apr",
+        "May"
+      ],
+      "best_confidence": "high"
+    },
+    {
+      "waterbody": "Lake Wellington",
+      "lat": -38.02,
+      "lng": 147.4,
+      "region": "Gippsland Lakes",
+      "authority": "Department of Energy, Environment and Climate Action (Victoria)",
+      "event_count": 1,
+      "years_active": [
+        2022
+      ],
+      "years_active_count": 1,
+      "first_seen": "2022-03-01",
+      "last_seen": "2022-04-14",
+      "recurring": false,
+      "avg_duration_days": 44,
+      "max_duration_days": 44,
+      "typical_season": "autumn",
+      "typical_months": [
+        "Mar",
+        "Mar"
+      ],
+      "best_confidence": "low"
+    },
+    {
+      "waterbody": "Lake Charm",
+      "lat": -35.38,
+      "lng": 143.55,
+      "region": "Torrumbarry / Kerang Lakes (Murray)",
+      "authority": "Goulburn-Murray Water",
+      "event_count": 1,
+      "years_active": [
+        2025
+      ],
+      "years_active_count": 1,
+      "first_seen": "2025-03-20",
+      "last_seen": "2025-04-30",
+      "recurring": false,
+      "avg_duration_days": 41,
+      "max_duration_days": 41,
+      "typical_season": "autumn",
+      "typical_months": [
+        "Mar",
+        "Mar"
+      ],
+      "best_confidence": "high"
+    },
+    {
+      "waterbody": "Craigmuir Lake",
+      "lat": -36.4,
+      "lng": 145.42,
+      "region": "Greater Shepparton",
+      "authority": "Greater Shepparton City Council",
+      "event_count": 1,
+      "years_active": [
+        2024
+      ],
+      "years_active_count": 1,
+      "first_seen": "2024-12-12",
+      "last_seen": "2025-01-06",
+      "recurring": false,
+      "avg_duration_days": 25,
+      "max_duration_days": 25,
+      "typical_season": "summer",
+      "typical_months": [
+        "Dec",
+        "Dec"
+      ],
+      "best_confidence": "medium"
+    },
+    {
+      "waterbody": "Lake Mulwala",
+      "lat": -35.98,
+      "lng": 145.98,
+      "region": "Murray River / Yarrawonga",
+      "authority": "Goulburn-Murray Water",
+      "event_count": 1,
+      "years_active": [
+        2020
+      ],
+      "years_active_count": 1,
+      "first_seen": "2020-02-13",
+      "last_seen": "2020-02-13",
+      "recurring": false,
+      "avg_duration_days": null,
+      "max_duration_days": null,
+      "typical_season": "summer",
+      "typical_months": [
+        "Feb",
+        "Feb"
+      ],
+      "best_confidence": "medium"
+    },
+    {
+      "waterbody": "Kangaroo Lake",
+      "lat": -35.8,
+      "lng": 143.93,
+      "region": "Torrumbarry Irrigation Area / Kerang Lakes (Murray)",
+      "authority": "Goulburn-Murray Water",
+      "event_count": 1,
+      "years_active": [
+        2023
+      ],
+      "years_active_count": 1,
+      "first_seen": "2023-02-21",
+      "last_seen": "2023-02-21",
+      "recurring": false,
+      "avg_duration_days": null,
+      "max_duration_days": null,
+      "typical_season": "summer",
+      "typical_months": [
+        "Feb",
+        "Feb"
+      ],
+      "best_confidence": "high"
+    },
+    {
+      "waterbody": "Racecourse Lake",
+      "lat": -35.75,
+      "lng": 143.93,
+      "region": "Torrumbarry Irrigation Area / Kerang Lakes (Murray)",
+      "authority": "Goulburn-Murray Water",
+      "event_count": 1,
+      "years_active": [
+        2023
+      ],
+      "years_active_count": 1,
+      "first_seen": "2023-02-21",
+      "last_seen": "2023-02-21",
+      "recurring": false,
+      "avg_duration_days": null,
+      "max_duration_days": null,
+      "typical_season": "summer",
+      "typical_months": [
+        "Feb",
+        "Feb"
+      ],
+      "best_confidence": "high"
+    },
+    {
+      "waterbody": "Lake Nillahcootie",
+      "lat": -36.87,
+      "lng": 145.87,
+      "region": "Broken River catchment",
+      "authority": "Goulburn-Murray Water",
+      "event_count": 1,
+      "years_active": [
+        2024
+      ],
+      "years_active_count": 1,
+      "first_seen": "2024-01-10",
+      "last_seen": "2024-01-10",
+      "recurring": false,
+      "avg_duration_days": null,
+      "max_duration_days": null,
+      "typical_season": "summer",
+      "typical_months": [
+        "Jan",
+        "Jan"
+      ],
+      "best_confidence": "high"
+    },
+    {
+      "waterbody": "Lake Hamilton",
+      "lat": -37.745,
+      "lng": 142.02,
+      "region": "Hamilton / Glenelg",
+      "authority": "Southern Grampians Shire Council",
+      "event_count": 1,
+      "years_active": [
+        2024
+      ],
+      "years_active_count": 1,
+      "first_seen": "2024-02-28",
+      "last_seen": "2024-02-28",
+      "recurring": false,
+      "avg_duration_days": null,
+      "max_duration_days": null,
+      "typical_season": "summer",
+      "typical_months": [
+        "Feb",
+        "Feb"
+      ],
+      "best_confidence": "high"
+    },
+    {
+      "waterbody": "Lake Bolac",
+      "lat": -37.71,
+      "lng": 142.87,
+      "region": "Ararat / Grampians",
+      "authority": "Ararat Rural City Council",
+      "event_count": 1,
+      "years_active": [
+        2024
+      ],
+      "years_active_count": 1,
+      "first_seen": "2024-05-01",
+      "last_seen": "2024-05-01",
+      "recurring": false,
+      "avg_duration_days": null,
+      "max_duration_days": null,
+      "typical_season": "autumn",
+      "typical_months": [
+        "May",
+        "May"
+      ],
+      "best_confidence": "medium"
+    },
+    {
+      "waterbody": "Lake Neangar",
+      "lat": -36.72,
+      "lng": 144.24,
+      "region": "Greater Bendigo / Eaglehawk",
+      "authority": "City of Greater Bendigo",
+      "event_count": 1,
+      "years_active": [
+        2024
+      ],
+      "years_active_count": 1,
+      "first_seen": "2024-10-08",
+      "last_seen": "2024-10-08",
+      "recurring": false,
+      "avg_duration_days": null,
+      "max_duration_days": null,
+      "typical_season": "spring",
+      "typical_months": [
+        "Oct",
+        "Oct"
+      ],
+      "best_confidence": "medium"
+    },
+    {
+      "waterbody": "Lake Burrumbeet",
+      "lat": -37.48,
+      "lng": 143.66,
+      "region": "Ballarat",
+      "authority": "City of Ballarat",
+      "event_count": 1,
+      "years_active": [
+        2025
+      ],
+      "years_active_count": 1,
+      "first_seen": "2025-03-21",
+      "last_seen": "2025-03-21",
+      "recurring": false,
+      "avg_duration_days": null,
+      "max_duration_days": null,
+      "typical_season": "autumn",
+      "typical_months": [
+        "Mar",
+        "Mar"
+      ],
+      "best_confidence": "medium"
+    },
+    {
+      "waterbody": "Upper Coliban Reservoir",
+      "lat": -37.15,
+      "lng": 144.42,
+      "region": "Central Victoria / Loddon-Campaspe",
+      "authority": "Coliban Water / Goulburn-Murray Water",
+      "event_count": 1,
+      "years_active": [
+        2025
+      ],
+      "years_active_count": 1,
+      "first_seen": "2025-04-23",
+      "last_seen": "2025-04-23",
+      "recurring": false,
+      "avg_duration_days": null,
+      "max_duration_days": null,
+      "typical_season": "autumn",
+      "typical_months": [
+        "Apr",
+        "Apr"
+      ],
+      "best_confidence": "medium"
+    },
+    {
+      "waterbody": "Murray River and Kings Billabong",
+      "lat": -34.22,
+      "lng": 142.24,
+      "region": "Sunraysia / Mallee (near Mildura)",
+      "authority": "Lower Murray Water",
+      "event_count": 1,
+      "years_active": [
+        2025
+      ],
+      "years_active_count": 1,
+      "first_seen": "2025-07-06",
+      "last_seen": "2025-07-06",
+      "recurring": false,
+      "avg_duration_days": null,
+      "max_duration_days": null,
+      "typical_season": "winter",
+      "typical_months": [
+        "Jul",
+        "Jul"
+      ],
+      "best_confidence": "medium"
+    },
+    {
+      "waterbody": "Lillydale Lake",
+      "lat": -37.763,
+      "lng": 145.356,
+      "region": "Lilydale",
+      "authority": "Yarra Ranges Council / Melbourne Water",
+      "event_count": 1,
+      "years_active": [
+        2026
+      ],
+      "years_active_count": 1,
+      "first_seen": "2026-02-20",
+      "last_seen": "2026-02-20",
+      "recurring": false,
+      "avg_duration_days": null,
+      "max_duration_days": null,
+      "typical_season": "summer",
+      "typical_months": [
+        "Feb",
+        "Feb"
+      ],
+      "best_confidence": "medium"
+    },
+    {
+      "waterbody": "Lake Cullulleraine",
+      "lat": -34.28,
+      "lng": 141.58,
+      "region": "Millewa / Mallee (near Mildura)",
+      "authority": "Lower Murray Water",
+      "event_count": 1,
+      "years_active": [
+        2026
+      ],
+      "years_active_count": 1,
+      "first_seen": "2026-02-27",
+      "last_seen": "2026-02-27",
+      "recurring": false,
+      "avg_duration_days": null,
+      "max_duration_days": null,
+      "typical_season": "summer",
+      "typical_months": [
+        "Feb",
+        "Feb"
+      ],
+      "best_confidence": "high"
+    },
+    {
+      "waterbody": "Wilson Botanic Park Lake",
+      "lat": -38.045,
+      "lng": 145.347,
+      "region": "Berwick",
+      "authority": "City of Casey",
+      "event_count": 1,
+      "years_active": [
+        2026
+      ],
+      "years_active_count": 1,
+      "first_seen": "2026-05-04",
+      "last_seen": "2026-05-04",
+      "recurring": false,
+      "avg_duration_days": null,
+      "max_duration_days": null,
+      "typical_season": "autumn",
+      "typical_months": [
+        "May",
+        "May"
+      ],
+      "best_confidence": "medium"
+    }
+  ],
+  "highlights": [
+    "Lake Eildon has been under a blue-green algae warning in 4 of the past 7 years, mostly across summer and autumn, with the longest lasting about 484 days.",
+    "Lake Eppalock has been under a blue-green algae warning in 4 of the past 7 years, mostly across summer and autumn, with the longest lasting about 160 days.",
+    "Lake Hume has been under a blue-green algae warning in 4 of the past 7 years, mostly across summer and spring, with the longest lasting about 35 days.",
+    "Hepburns Lagoon has had 3 recorded blue-green algae warnings since 2020, almost always in summer, with the longest lasting about 238 days.",
+    "Tullaroop Reservoir has been under a blue-green algae warning in 3 of the past 7 years, almost always in summer, with the longest lasting about 189 days.",
+    "Lake Wallace has been under a blue-green algae warning in 3 of the past 7 years, almost always in autumn, with the longest lasting about 85 days.",
+    "Gippsland Lakes has had 3 recorded blue-green algae warnings since 2020, almost always in autumn.",
+    "Laanecoorie Reservoir has had 3 recorded blue-green algae warnings since 2020, almost always in autumn.",
+    "Green Lake has had 3 recorded blue-green algae warnings since 2020, almost always in autumn.",
+    "Cairn Curran Reservoir has had 2 recorded blue-green algae warnings since 2020, almost always in summer, with the longest lasting about 202 days.",
+    "Spavin Lake has had 2 recorded blue-green algae warnings since 2020, mostly across summer and autumn, with the longest lasting about 75 days.",
+    "Lake Lonsdale has had 2 recorded blue-green algae warnings since 2020, mostly across autumn and spring."
+  ]
+}

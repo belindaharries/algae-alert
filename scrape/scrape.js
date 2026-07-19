@@ -24,6 +24,7 @@ import * as cheerio from 'cheerio';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const OUT = path.join(__dirname, '..', 'data.json');
+const HIST = path.join(__dirname, '..', 'history.json');
 const UA = { headers: { 'User-Agent': 'BlueGreenAlgaeAlert/1.0 (+https://bluegreenalgaealert.com.au)' } };
 
 /* Known waterbody coordinates. Add new ones here as they appear in warnings. */
@@ -212,6 +213,89 @@ function advisoriesFromNews(newsItems, alreadyWarned){
 function todayShort(){ return fmt(new Date()); }
 function fmt(d){ return isNaN(d) ? '' : d.toLocaleDateString('en-AU',{day:'2-digit',month:'short',year:'numeric'}); }
 function plusDays(n){ const d=new Date(); d.setDate(d.getDate()+n); return d; }
+function isoToday(){ return new Date().toISOString().slice(0,10); }
+function slug(s){ return (s||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,''); }
+function seasonAU(iso){ const m=+iso.slice(5,7);
+  return m>=12||m<=2?'summer':m<=5?'autumn':m<=8?'winter':'spring'; }
+
+/* ---- Historical accrual ----
+   Each weekly run folds its CONFIRMED (red) warnings into history.json so the
+   record grows on its own. Rules that keep it honest and dupe-free:
+   - A red warning whose waterbody already has an OPEN event (end_date null, from
+     the research build or a prior run) adopts that event rather than duplicating
+     it — and marks it "managed" so this scraper owns its lifecycle from now on.
+   - A red warning with no open event opens a new one (start = today, high
+     confidence, source = the authority page).
+   - A managed open event that the scraper has stopped seeing is closed
+     (end_date = today, duration computed) — this captures bloom END dates from
+     the weekly cadence. Events the scraper has never seen are never touched, so
+     research/council history stays intact. Dedup is by event id. */
+export function accrueHistory(warnings, histPath = HIST){
+  let hist;
+  try { hist = JSON.parse(fs.readFileSync(histPath, 'utf8')); }
+  catch { hist = { events: [], undated_events: [] }; }
+  const events = hist.events || (hist.events = []);
+  const today = isoToday();
+
+  const norm = s => (s||'').trim().toLowerCase();
+  // A waterbody is "currently open" only if its LATEST-by-start event is open.
+  // This ignores stale past events whose end date was never found (which would
+  // otherwise be adopted as the current bloom and closed with a nonsense duration).
+  const latestByWb = new Map();
+  for(const e of events){
+    const k = norm(e.waterbody), cur = latestByWb.get(k);
+    if(!cur || (e.start_date||'') >= (cur.start_date||'')) latestByWb.set(k, e);
+  }
+  const openByWb = new Map();
+  for(const [k, e] of latestByWb){ if(!e.end_date) openByWb.set(k, e); }
+
+  const reds = warnings.filter(w => w.level === 'red');
+  const seen = new Set();
+
+  for(const w of reds){
+    const key = norm(w.name);
+    seen.add(key);
+    const open = openByWb.get(key);
+    if(open){ open._managed = true; continue; }          // adopt existing open bloom
+    const start = today;
+    const ev = {
+      id: `${slug(w.authority).slice(0,8)}-${slug(w.name)}-${start.slice(0,7)}`,
+      waterbody: w.name, lat: w.lat ?? null, lng: w.lng ?? null,
+      authority: w.authority, region: w.region || '', level: 'warning',
+      cell_count_max: null, cell_count_avg: null,
+      start_date: start, end_date: null, duration_days: null,
+      year: +start.slice(0,4), season: seasonAU(start),
+      source_type: 'authority-scraper', source_url: w.authorityUrl || '',
+      source_urls: w.authorityUrl ? [w.authorityUrl] : [],
+      confidence: 'high', _managed: true,
+      notes: 'Detected by the weekly scraper from the authority warnings page.'
+    };
+    if(events.some(x => x.id === ev.id)) continue;        // dedup on id
+    events.push(ev);
+    openByWb.set(key, ev);
+  }
+
+  // Close managed blooms we no longer see (bloom lifted).
+  let closed = 0;
+  for(const e of events){
+    if(e._managed && !e.end_date && !seen.has(norm(e.waterbody))){
+      e.end_date = today;
+      const s = new Date(e.start_date), d = new Date(today);
+      e.duration_days = Math.max(0, Math.round((d - s) / 86400000));
+      closed++;
+    }
+  }
+
+  events.sort((a,b) => (a.start_date||'').localeCompare(b.start_date||'') || a.waterbody.localeCompare(b.waterbody));
+  hist.generated = today;
+  hist.event_count = events.length;
+  hist.coverage_end = events.reduce((m,e) => {
+    const d = e.end_date || e.start_date; return d && d > m ? d : m;
+  }, hist.coverage_end || '');
+  fs.writeFileSync(histPath, JSON.stringify(hist, null, 2));
+  console.log(`history.json: ${events.length} events (${reds.length} active reds folded in, ${closed} closed).`
+    + ` Re-run scrape/insights.py locally to refresh insights.json before pushing.`);
+}
 
 async function main(){
   const warnings = [];
@@ -273,6 +357,12 @@ async function main(){
   };
   fs.writeFileSync(OUT, JSON.stringify(data, null, 2));
   console.log(`Wrote ${OUT}: ${warnings.length} pins (${totalWarn} confirmed, ${advisories.length} advisory), ${newsOut.length} news items, updated ${data.updatedLabel}`);
+
+  // Fold this week's confirmed warnings into the historical record.
+  try { accrueHistory(warnings); }
+  catch(e){ console.warn('[history] accrual skipped: ' + e.message); }
 }
 
-main().catch(e => { console.error(e); process.exit(1); });
+if (import.meta.url === `file://${process.argv[1]}`) {
+  main().catch(e => { console.error(e); process.exit(1); });
+}

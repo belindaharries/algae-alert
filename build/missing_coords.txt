@@ -1,0 +1,1 @@
+Waterbodies with no coordinate (add to GEOCODE, verify location):

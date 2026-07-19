@@ -1,0 +1,41 @@
+{
+  "by_year": {
+    "2020": 4,
+    "2021": 2,
+    "2022": 4,
+    "2023": 10,
+    "2024": 13,
+    "2025": 23,
+    "2026": 7
+  },
+  "by_confidence": {
+    "medium": 29,
+    "low": 4,
+    "high": 30
+  },
+  "by_authority": {
+    "Goulburn-Murray Water": 27,
+    "GWMWater": 6,
+    "Greater Shepparton City Council": 5,
+    "WaterNSW": 4,
+    "Department of Energy, Environment and Climate Action (Victoria)": 2,
+    "Hume City Council": 2,
+    "West Wimmera Shire Council": 2,
+    "Central Goldfields Shire Council": 2,
+    "Lower Murray Water": 2,
+    "Victorian Department of Health": 1,
+    "West Wimmera Shire Council / GWMWater": 1,
+    "Southern Grampians Shire Council": 1,
+    "Horsham Rural City Council": 1,
+    "Ararat Rural City Council": 1,
+    "DEECA (Victorian Government)": 1,
+    "City of Greater Bendigo": 1,
+    "City of Ballarat": 1,
+    "Coliban Water / Goulburn-Murray Water": 1,
+    "Yarra Ranges Council / Melbourne Water": 1,
+    "City of Casey": 1
+  },
+  "events_with_end_date": 19,
+  "events_with_cell_counts": 0,
+  "total_events": 63
+}
