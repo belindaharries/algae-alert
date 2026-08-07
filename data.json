@@ -1,7 +1,7 @@
 {
-  "updated": "2026-07-30",
-  "updatedLabel": "30 July 2026",
-  "nextUpdate": "06 Aug 2026",
+  "updated": "2026-08-07",
+  "updatedLabel": "07 Aug 2026",
+  "nextUpdate": "14 Aug 2026",
   "warnings": [
     {
       "name": "Recently Removed",
@@ -9,8 +9,19 @@
       "authority": "Goulburn-Murray Water",
       "authorityUrl": "https://www.g-mwater.com.au/bluegreenalgae-alert/",
       "level": "red",
-      "status": "Warning — Recently Removed Tullaroop Reservoir Recently Removed A warning is no longer current for Tullaroop Resevoir. addEvent(window, \"load\", function() { markerCounter++; setTimeout(funct",
-      "updated": "30 July 2026",
+      "status": "Warning — Recently Removed Lake Eppalock Recently Removed A warning is no longer current for Lake Eppalock. addEvent(window, \"load\", function() { markerCounter++; setTimeout(function() { var",
+      "updated": "07 Aug 2026",
+      "lat": null,
+      "lng": null
+    },
+    {
+      "name": "Recently Removed",
+      "region": "Goulburn-Murray Water area",
+      "authority": "Goulburn-Murray Water",
+      "authorityUrl": "https://www.g-mwater.com.au/bluegreenalgae-alert/",
+      "level": "red",
+      "status": "Warning — Recently Removed Hepburns Lagoon Recently Removed A warning is no longer current for Hebpurns Lagoon. addEvent(window, \"load\", function() { markerCounter++; setTimeout(function() {",
+      "updated": "07 Aug 2026",
       "lat": null,
       "lng": null
     },
@@ -21,29 +32,7 @@
       "authorityUrl": "https://www.g-mwater.com.au/bluegreenalgae-alert/",
       "level": "red",
       "status": "Warning — Warning Lake Eildon Warning Goulburn-Murray Water is warning the public to avoid contact with water in Lake Eildon after monitoring detected high levels of blue-green algae. Warnin",
-      "updated": "30 July 2026",
-      "lat": null,
-      "lng": null
-    },
-    {
-      "name": "Warning",
-      "region": "Goulburn-Murray Water area",
-      "authority": "Goulburn-Murray Water",
-      "authorityUrl": "https://www.g-mwater.com.au/bluegreenalgae-alert/",
-      "level": "red",
-      "status": "Warning — Warning Lake Eppalock Warning Goulburn-Murray Water is warning the public to avoid contact with water in Lake Eppalock after monitoring detected high levels of blue-green algae. Wa",
-      "updated": "30 July 2026",
-      "lat": null,
-      "lng": null
-    },
-    {
-      "name": "Warning",
-      "region": "Goulburn-Murray Water area",
-      "authority": "Goulburn-Murray Water",
-      "authorityUrl": "https://www.g-mwater.com.au/bluegreenalgae-alert/",
-      "level": "red",
-      "status": "Warning — Warning Hepburns Lagoon Warning Goulburn-Murray Water is warning the public to avoid contact with water in Hebpurns Lagoon including the Hepburns Race after monitoring detected hig",
-      "updated": "30 July 2026",
+      "updated": "07 Aug 2026",
       "lat": null,
       "lng": null
     },
@@ -54,7 +43,7 @@
       "authorityUrl": "https://www.g-mwater.com.au/bluegreenalgae-alert/",
       "level": "red",
       "status": "Warning — No Current Warning Cairn Curran Reservoir No Current Warning addEvent(window, \"load\", function() { markerCounter++; setTimeout(function() { var strInfo = document.getElementById('C",
-      "updated": "30 July 2026",
+      "updated": "07 Aug 2026",
       "lat": null,
       "lng": null
     },
@@ -65,7 +54,7 @@
       "authorityUrl": "https://www.g-mwater.com.au/bluegreenalgae-alert/",
       "level": "red",
       "status": "Warning — No Current Warning Dartmouth Dam No Current Warning addEvent(window, \"load\", function() { markerCounter++; setTimeout(function() { var strInfo = document.getElementById('Dartmouth_",
-      "updated": "30 July 2026",
+      "updated": "07 Aug 2026",
       "lat": null,
       "lng": null
     },
@@ -76,7 +65,7 @@
       "authorityUrl": "https://www.g-mwater.com.au/bluegreenalgae-alert/",
       "level": "red",
       "status": "Warning — No Current Warning Greens Lake No Current Warning addEvent(window, \"load\", function() { markerCounter++; setTimeout(function() { var strInfo = document.getElementById('Greens_Lake_",
-      "updated": "30 July 2026",
+      "updated": "07 Aug 2026",
       "lat": null,
       "lng": null
     },
@@ -87,7 +76,7 @@
       "authorityUrl": "https://www.g-mwater.com.au/bluegreenalgae-alert/",
       "level": "red",
       "status": "Warning — No Current Warning Hume Dam No Current Warning For further information on Lake Hume visit the Water NSW Website addEvent(window, \"load\", function() { markerCounter++; setTimeout(fu",
-      "updated": "30 July 2026",
+      "updated": "07 Aug 2026",
       "lat": null,
       "lng": null
     },
@@ -98,7 +87,7 @@
       "authorityUrl": "https://www.g-mwater.com.au/bluegreenalgae-alert/",
       "level": "red",
       "status": "Warning — No Current Warning Kangaroo Lake No Current Warning addEvent(window, \"load\", function() { markerCounter++; setTimeout(function() { var strInfo = document.getElementById('Kangaroo_L",
-      "updated": "30 July 2026",
+      "updated": "07 Aug 2026",
       "lat": null,
       "lng": null
     },
@@ -109,7 +98,7 @@
       "authorityUrl": "https://www.g-mwater.com.au/bluegreenalgae-alert/",
       "level": "red",
       "status": "Warning — No Current Warning Kow (Ghow) Swamp No Current Warning addEvent(window, \"load\", function() { markerCounter++; setTimeout(function() { var strInfo = document.getElementById('Kow_(Gh",
-      "updated": "30 July 2026",
+      "updated": "07 Aug 2026",
       "lat": null,
       "lng": null
     },
@@ -120,7 +109,7 @@
       "authorityUrl": "https://www.g-mwater.com.au/bluegreenalgae-alert/",
       "level": "red",
       "status": "Warning — No Current Warning Laanecoorie Reservoir No Current Warning addEvent(window, \"load\", function() { markerCounter++; setTimeout(function() { var strInfo = document.getElementById('La",
-      "updated": "30 July 2026",
+      "updated": "07 Aug 2026",
       "lat": null,
       "lng": null
     },
@@ -131,7 +120,7 @@
       "authorityUrl": "https://www.g-mwater.com.au/bluegreenalgae-alert/",
       "level": "red",
       "status": "Warning — No Current Warning Lake Boga No Current Warning addEvent(window, \"load\", function() { markerCounter++; setTimeout(function() { var strInfo = document.getElementById('Lake_Boga_Info",
-      "updated": "30 July 2026",
+      "updated": "07 Aug 2026",
       "lat": null,
       "lng": null
     },
@@ -142,7 +131,7 @@
       "authorityUrl": "https://www.g-mwater.com.au/bluegreenalgae-alert/",
       "level": "red",
       "status": "Warning — No Current Warning Lake Buffalo No Current Warning addEvent(window, \"load\", function() { markerCounter++; setTimeout(function() { var strInfo = document.getElementById('Lake_Buffal",
-      "updated": "30 July 2026",
+      "updated": "07 Aug 2026",
       "lat": null,
       "lng": null
     },
@@ -153,7 +142,7 @@
       "authorityUrl": "https://www.g-mwater.com.au/bluegreenalgae-alert/",
       "level": "red",
       "status": "Warning — No Current Warning Lake Charm No Current Warning addEvent(window, \"load\", function() { markerCounter++; setTimeout(function() { var strInfo = document.getElementById('Lake_Charm_In",
-      "updated": "30 July 2026",
+      "updated": "07 Aug 2026",
       "lat": null,
       "lng": null
     },
@@ -164,7 +153,7 @@
       "authorityUrl": "https://www.g-mwater.com.au/bluegreenalgae-alert/",
       "level": "red",
       "status": "Warning — No Current Warning Lake Nillahcootie No Current Warning addEvent(window, \"load\", function() { markerCounter++; setTimeout(function() { var strInfo = document.getElementById('Lake_N",
-      "updated": "30 July 2026",
+      "updated": "07 Aug 2026",
       "lat": null,
       "lng": null
     },
@@ -175,7 +164,7 @@
       "authorityUrl": "https://www.g-mwater.com.au/bluegreenalgae-alert/",
       "level": "red",
       "status": "Warning — No Current Warning Lake William Hovell No Current Warning addEvent(window, \"load\", function() { markerCounter++; setTimeout(function() { var strInfo = document.getElementById('Lake",
-      "updated": "30 July 2026",
+      "updated": "07 Aug 2026",
       "lat": null,
       "lng": null
     },
@@ -186,7 +175,7 @@
       "authorityUrl": "https://www.g-mwater.com.au/bluegreenalgae-alert/",
       "level": "red",
       "status": "Warning — No Current Warning Nagambie Waterways & Goulburn Weir No Current Warning addEvent(window, \"load\", function() { markerCounter++; setTimeout(function() { var strInfo = document.getEl",
-      "updated": "30 July 2026",
+      "updated": "07 Aug 2026",
       "lat": null,
       "lng": null
     },
@@ -197,7 +186,7 @@
       "authorityUrl": "https://www.g-mwater.com.au/bluegreenalgae-alert/",
       "level": "red",
       "status": "Warning — No Current Warning Newlyn Reservoir No Current Warning addEvent(window, \"load\", function() { markerCounter++; setTimeout(function() { var strInfo = document.getElementById('Newlyn_",
-      "updated": "30 July 2026",
+      "updated": "07 Aug 2026",
       "lat": null,
       "lng": null
     },
@@ -208,7 +197,18 @@
       "authorityUrl": "https://www.g-mwater.com.au/bluegreenalgae-alert/",
       "level": "red",
       "status": "Warning — No Current Warning Torrumbarry Weir No Current Warning addEvent(window, \"load\", function() { markerCounter++; setTimeout(function() { var strInfo = document.getElementById('Torrumb",
-      "updated": "30 July 2026",
+      "updated": "07 Aug 2026",
+      "lat": null,
+      "lng": null
+    },
+    {
+      "name": "No Current Warning",
+      "region": "Goulburn-Murray Water area",
+      "authority": "Goulburn-Murray Water",
+      "authorityUrl": "https://www.g-mwater.com.au/bluegreenalgae-alert/",
+      "level": "red",
+      "status": "Warning — No Current Warning Tullaroop Reservoir No Current Warning addEvent(window, \"load\", function() { markerCounter++; setTimeout(function() { var strInfo = document.getElementById('Tull",
+      "updated": "07 Aug 2026",
       "lat": null,
       "lng": null
     },
@@ -219,7 +219,7 @@
       "authorityUrl": "https://www.g-mwater.com.au/bluegreenalgae-alert/",
       "level": "red",
       "status": "Warning — No Current Warning Waranga Basin No Current Warning addEvent(window, \"load\", function() { markerCounter++; setTimeout(function() { var strInfo = document.getElementById('Waranga_Ba",
-      "updated": "30 July 2026",
+      "updated": "07 Aug 2026",
       "lat": null,
       "lng": null
     },
@@ -230,7 +230,7 @@
       "authorityUrl": "https://www.g-mwater.com.au/bluegreenalgae-alert/",
       "level": "red",
       "status": "Warning — No Current Warning Yarrawonga Weir/Lake Mulwala No Current Warning addEvent(window, \"load\", function() { markerCounter++; setTimeout(function() { var strInfo = document.getElementB",
-      "updated": "30 July 2026",
+      "updated": "07 Aug 2026",
       "lat": null,
       "lng": null
     },
@@ -241,7 +241,7 @@
       "authorityUrl": "https://www.g-mwater.com.au/bluegreenalgae-alert/",
       "level": "red",
       "status": "Warning — No Current Warning Broken Creek No Current Warning addEvent(window, \"load\", function() { markerCounter++; setTimeout(function() { var strInfo = document.getElementById('Broken_Cree",
-      "updated": "30 July 2026",
+      "updated": "07 Aug 2026",
       "lat": null,
       "lng": null
     },
@@ -252,7 +252,7 @@
       "authorityUrl": "https://www.g-mwater.com.au/bluegreenalgae-alert/",
       "level": "red",
       "status": "Warning — No Current Warning Torgannah Lagoon No Current Warning addEvent(window, \"load\", function() { markerCounter++; setTimeout(function() { var strInfo = document.getElementById('Torgann",
-      "updated": "30 July 2026",
+      "updated": "07 Aug 2026",
       "lat": null,
       "lng": null
     },
@@ -263,7 +263,7 @@
       "authorityUrl": "https://www.g-mwater.com.au/bluegreenalgae-alert/",
       "level": "red",
       "status": "Warning — No Current Warning Central Goulburn Irrigation Area No Current Warning addEvent(window, \"load\", function() { markerCounter++; setTimeout(function() { var strInfo = document.getElem",
-      "updated": "30 July 2026",
+      "updated": "07 Aug 2026",
       "lat": null,
       "lng": null
     },
@@ -274,7 +274,7 @@
       "authorityUrl": "https://www.g-mwater.com.au/bluegreenalgae-alert/",
       "level": "red",
       "status": "Warning — No Current Warning Loddon Valley Irrigation Area Channels No Current Warning addEvent(window, \"load\", function() { markerCounter++; setTimeout(function() { var strInfo = document.g",
-      "updated": "30 July 2026",
+      "updated": "07 Aug 2026",
       "lat": null,
       "lng": null
     },
@@ -285,7 +285,7 @@
       "authorityUrl": "https://www.g-mwater.com.au/bluegreenalgae-alert/",
       "level": "red",
       "status": "Warning — No Current Warning Murray Valley Irrigation Area No Current Warning addEvent(window, \"load\", function() { markerCounter++; setTimeout(function() { var strInfo = document.getElement",
-      "updated": "30 July 2026",
+      "updated": "07 Aug 2026",
       "lat": null,
       "lng": null
     },
@@ -296,7 +296,7 @@
       "authorityUrl": "https://www.g-mwater.com.au/bluegreenalgae-alert/",
       "level": "red",
       "status": "Warning — No Current Warning Rochester Irrigation Area Channels No Current Warning addEvent(window, \"load\", function() { markerCounter++; setTimeout(function() { var strInfo = document.getEl",
-      "updated": "30 July 2026",
+      "updated": "07 Aug 2026",
       "lat": null,
       "lng": null
     },
@@ -307,7 +307,7 @@
       "authorityUrl": "https://www.g-mwater.com.au/bluegreenalgae-alert/",
       "level": "red",
       "status": "Warning — No Current Warning Shepparton Irrigation Area No Current Warning addEvent(window, \"load\", function() { markerCounter++; setTimeout(function() { var strInfo = document.getElementByI",
-      "updated": "30 July 2026",
+      "updated": "07 Aug 2026",
       "lat": null,
       "lng": null
     },
@@ -318,7 +318,7 @@
       "authorityUrl": "https://www.g-mwater.com.au/bluegreenalgae-alert/",
       "level": "red",
       "status": "Warning — No Current Warning Torrumbarry Irrigation Area - Cockatoo Lagoon No Current Warning addEvent(window, \"load\", function() { markerCounter++; setTimeout(function() { var strInfo = doc",
-      "updated": "30 July 2026",
+      "updated": "07 Aug 2026",
       "lat": null,
       "lng": null
     },
@@ -329,7 +329,7 @@
       "authorityUrl": "https://www.g-mwater.com.au/bluegreenalgae-alert/",
       "level": "red",
       "status": "Warning — No Current Warning Torrumbarry Irrigation Area - First Reedy Lake No Current Warning addEvent(window, \"load\", function() { markerCounter++; setTimeout(function() { var strInfo = do",
-      "updated": "30 July 2026",
+      "updated": "07 Aug 2026",
       "lat": null,
       "lng": null
     },
@@ -340,7 +340,7 @@
       "authorityUrl": "https://www.g-mwater.com.au/bluegreenalgae-alert/",
       "level": "red",
       "status": "Warning — No Current Warning Torrumbarry Irrigation Area - Gum Lagoon No Current Warning addEvent(window, \"load\", function() { markerCounter++; setTimeout(function() { var strInfo = document",
-      "updated": "30 July 2026",
+      "updated": "07 Aug 2026",
       "lat": null,
       "lng": null
     },
@@ -351,7 +351,7 @@
       "authorityUrl": "https://www.g-mwater.com.au/bluegreenalgae-alert/",
       "level": "red",
       "status": "Warning — No Current Warning Torrumbarry Irrigation Area - Gunbower Creek No Current Warning addEvent(window, \"load\", function() { markerCounter++; setTimeout(function() { var strInfo = docu",
-      "updated": "30 July 2026",
+      "updated": "07 Aug 2026",
       "lat": null,
       "lng": null
     },
@@ -362,7 +362,7 @@
       "authorityUrl": "https://www.g-mwater.com.au/bluegreenalgae-alert/",
       "level": "red",
       "status": "Warning — No Current Warning Torrumbarry Irrigation Area - Little Lake Charm No Current Warning addEvent(window, \"load\", function() { markerCounter++; setTimeout(function() { var strInfo = d",
-      "updated": "30 July 2026",
+      "updated": "07 Aug 2026",
       "lat": null,
       "lng": null
     },
@@ -373,7 +373,7 @@
       "authorityUrl": "https://www.g-mwater.com.au/bluegreenalgae-alert/",
       "level": "red",
       "status": "Warning — No Current Warning Torrumbarry Irrigation Area - Little Murray River No Current Warning addEvent(window, \"load\", function() { markerCounter++; setTimeout(function() { var strInfo =",
-      "updated": "30 July 2026",
+      "updated": "07 Aug 2026",
       "lat": null,
       "lng": null
     },
@@ -384,7 +384,7 @@
       "authorityUrl": "https://www.g-mwater.com.au/bluegreenalgae-alert/",
       "level": "red",
       "status": "Warning — No Current Warning Torrumbarry Irrigation Area - Loddon River Kerang Weir No Current Warning addEvent(window, \"load\", function() { markerCounter++; setTimeout(function() { var strI",
-      "updated": "30 July 2026",
+      "updated": "07 Aug 2026",
       "lat": null,
       "lng": null
     },
@@ -395,7 +395,7 @@
       "authorityUrl": "https://www.g-mwater.com.au/bluegreenalgae-alert/",
       "level": "red",
       "status": "Warning — No Current Warning Torrumbarry Irrigation Area - Macorna Main (No.2) Channel System No Current Warning addEvent(window, \"load\", function() { markerCounter++; setTimeout(function() ",
-      "updated": "30 July 2026",
+      "updated": "07 Aug 2026",
       "lat": null,
       "lng": null
     },
@@ -406,7 +406,7 @@
       "authorityUrl": "https://www.g-mwater.com.au/bluegreenalgae-alert/",
       "level": "red",
       "status": "Warning — No Current Warning Torrumbarry Irrigation Area - Middle Reedy Lake No Current Warning addEvent(window, \"load\", function() { markerCounter++; setTimeout(function() { var strInfo = d",
-      "updated": "30 July 2026",
+      "updated": "07 Aug 2026",
       "lat": null,
       "lng": null
     },
@@ -417,7 +417,7 @@
       "authorityUrl": "https://www.g-mwater.com.au/bluegreenalgae-alert/",
       "level": "red",
       "status": "Warning — No Current Warning Torrumbarry Irrigation Area - National Channel No Current Warning addEvent(window, \"load\", function() { markerCounter++; setTimeout(function() { var strInfo = do",
-      "updated": "30 July 2026",
+      "updated": "07 Aug 2026",
       "lat": null,
       "lng": null
     },
@@ -428,7 +428,7 @@
       "authorityUrl": "https://www.g-mwater.com.au/bluegreenalgae-alert/",
       "level": "red",
       "status": "Warning — No Current Warning Torrumbarry Irrigation Area - No 1 Lagoon No Current Warning addEvent(window, \"load\", function() { markerCounter++; setTimeout(function() { var strInfo = documen",
-      "updated": "30 July 2026",
+      "updated": "07 Aug 2026",
       "lat": null,
       "lng": null
     },
@@ -439,7 +439,7 @@
       "authorityUrl": "https://www.g-mwater.com.au/bluegreenalgae-alert/",
       "level": "red",
       "status": "Warning — No Current Warning Torrumbarry Irrigation Area - No 2 Lagoon No Current Warning addEvent(window, \"load\", function() { markerCounter++; setTimeout(function() { var strInfo = documen",
-      "updated": "30 July 2026",
+      "updated": "07 Aug 2026",
       "lat": null,
       "lng": null
     },
@@ -450,7 +450,7 @@
       "authorityUrl": "https://www.g-mwater.com.au/bluegreenalgae-alert/",
       "level": "red",
       "status": "Warning — No Current Warning Torrumbarry Irrigation Area - No 3 Lagoon No Current Warning addEvent(window, \"load\", function() { markerCounter++; setTimeout(function() { var strInfo = documen",
-      "updated": "30 July 2026",
+      "updated": "07 Aug 2026",
       "lat": null,
       "lng": null
     },
@@ -461,7 +461,7 @@
       "authorityUrl": "https://www.g-mwater.com.au/bluegreenalgae-alert/",
       "level": "red",
       "status": "Warning — No Current Warning Torrumbarry Irrigation Area - No 4 Lagoon No Current Warning addEvent(window, \"load\", function() { markerCounter++; setTimeout(function() { var strInfo = documen",
-      "updated": "30 July 2026",
+      "updated": "07 Aug 2026",
       "lat": null,
       "lng": null
     },
@@ -472,7 +472,7 @@
       "authorityUrl": "https://www.g-mwater.com.au/bluegreenalgae-alert/",
       "level": "red",
       "status": "Warning — No Current Warning Torrumbarry Irrigation Area No.1 Channel No Current Warning addEvent(window, \"load\", function() { markerCounter++; setTimeout(function() { var strInfo = document",
-      "updated": "30 July 2026",
+      "updated": "07 Aug 2026",
       "lat": null,
       "lng": null
     },
@@ -483,7 +483,7 @@
       "authorityUrl": "https://www.g-mwater.com.au/bluegreenalgae-alert/",
       "level": "red",
       "status": "Warning — No Current Warning Torrumbarry Irrigation Area - No. 7 Channel No Current Warning addEvent(window, \"load\", function() { markerCounter++; setTimeout(function() { var strInfo = docum",
-      "updated": "30 July 2026",
+      "updated": "07 Aug 2026",
       "lat": null,
       "lng": null
     },
@@ -494,7 +494,7 @@
       "authorityUrl": "https://www.g-mwater.com.au/bluegreenalgae-alert/",
       "level": "red",
       "status": "Warning — No Current Warning Torrumbarry Irrigation Area - Pyramid/Box Creek System No Current Warning addEvent(window, \"load\", function() { markerCounter++; setTimeout(function() { var strI",
-      "updated": "30 July 2026",
+      "updated": "07 Aug 2026",
       "lat": null,
       "lng": null
     },
@@ -505,7 +505,7 @@
       "authorityUrl": "https://www.g-mwater.com.au/bluegreenalgae-alert/",
       "level": "red",
       "status": "Warning — No Current Warning Torrumbarry Irrigation Area - Racecourse Lake No Current Warning addEvent(window, \"load\", function() { markerCounter++; setTimeout(function() { var strInfo = doc",
-      "updated": "30 July 2026",
+      "updated": "07 Aug 2026",
       "lat": null,
       "lng": null
     },
@@ -516,7 +516,7 @@
       "authorityUrl": "https://www.g-mwater.com.au/bluegreenalgae-alert/",
       "level": "red",
       "status": "Warning — No Current Warning Torrumbarry Irrigation Area - Taylors Creek No Current Warning addEvent(window, \"load\", function() { markerCounter++; setTimeout(function() { var strInfo = docum",
-      "updated": "30 July 2026",
+      "updated": "07 Aug 2026",
       "lat": null,
       "lng": null
     },
@@ -527,7 +527,7 @@
       "authorityUrl": "https://www.g-mwater.com.au/bluegreenalgae-alert/",
       "level": "red",
       "status": "Warning — No Current Warning Torrumbarry Irrigation Area - Taylors Lagoon No Current Warning addEvent(window, \"load\", function() { markerCounter++; setTimeout(function() { var strInfo = docu",
-      "updated": "30 July 2026",
+      "updated": "07 Aug 2026",
       "lat": null,
       "lng": null
     },
@@ -538,7 +538,7 @@
       "authorityUrl": "https://www.g-mwater.com.au/bluegreenalgae-alert/",
       "level": "red",
       "status": "Warning — No Current Warning East Loddon Water District No Current Warning addEvent(window, \"load\", function() { markerCounter++; setTimeout(function() { var strInfo = document.getElementByI",
-      "updated": "30 July 2026",
+      "updated": "07 Aug 2026",
       "lat": null,
       "lng": null
     },
@@ -549,7 +549,7 @@
       "authorityUrl": "https://www.g-mwater.com.au/bluegreenalgae-alert/",
       "level": "red",
       "status": "Warning — No Current Warning Nornmanville Water District No Current Warning addEvent(window, \"load\", function() { markerCounter++; setTimeout(function() { var strInfo = document.getElementBy",
-      "updated": "30 July 2026",
+      "updated": "07 Aug 2026",
       "lat": null,
       "lng": null
     },
@@ -560,7 +560,7 @@
       "authorityUrl": "https://www.g-mwater.com.au/bluegreenalgae-alert/",
       "level": "red",
       "status": "Warning — No Current Warning Nyah Irrigation District No Current Warning addEvent(window, \"load\", function() { markerCounter++; setTimeout(function() { var strInfo = document.getElementById(",
-      "updated": "30 July 2026",
+      "updated": "07 Aug 2026",
       "lat": null,
       "lng": null
     },
@@ -571,7 +571,7 @@
       "authorityUrl": "https://www.g-mwater.com.au/bluegreenalgae-alert/",
       "level": "red",
       "status": "Warning — No Current Warning Tresco Irrigation District No Current Warning addEvent(window, \"load\", function() { markerCounter++; setTimeout(function() { var strInfo = document.getElementByI",
-      "updated": "30 July 2026",
+      "updated": "07 Aug 2026",
       "lat": null,
       "lng": null
     },
@@ -582,7 +582,7 @@
       "authorityUrl": "https://www.g-mwater.com.au/bluegreenalgae-alert/",
       "level": "red",
       "status": "Warning — No Current Warning Tungamah Water District No Current Warning addEvent(window, \"load\", function() { markerCounter++; setTimeout(function() { var strInfo = document.getElementById('",
-      "updated": "30 July 2026",
+      "updated": "07 Aug 2026",
       "lat": null,
       "lng": null
     },
@@ -593,7 +593,7 @@
       "authorityUrl": "https://www.g-mwater.com.au/bluegreenalgae-alert/",
       "level": "red",
       "status": "Warning — No Current Warning West Loddon Water District No Current Warning addEvent(window, \"load\", function() { markerCounter++; setTimeout(function() { var strInfo = document.getElementByI",
-      "updated": "30 July 2026",
+      "updated": "07 Aug 2026",
       "lat": null,
       "lng": null
     },
@@ -604,7 +604,7 @@
       "authorityUrl": "https://www.g-mwater.com.au/bluegreenalgae-alert/",
       "level": "red",
       "status": "Warning — No Current Warning Woorinen Irrigation District No Current Warning addEvent(window, \"load\", function() { markerCounter++; setTimeout(function() { var strInfo = document.getElementB",
-      "updated": "30 July 2026",
+      "updated": "07 Aug 2026",
       "lat": null,
       "lng": null
     }
@@ -814,68 +814,56 @@
     {
       "title": "55 Victorian waterbodies are under an active warning",
       "source": "Weekly update",
-      "date": "30 July 2026",
+      "date": "07 Aug 2026",
       "url": "https://www.g-mwater.com.au/bluegreenalgae-alert/"
     },
     {
-      "title": "Hamilton councillors delay decision on proposed north-end Islamic school - CHCH",
-      "source": "CHCH",
-      "date": "29 July 2026",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOaTIwYWp3dDVZbks5RFFnZXA3dU5mMWZRM21tVEZfNkRTczB6a3lndWRmQTJTZW5YNlV3d2JxdGdkSUdFSWxlb1dsLVAzSERwTmZsc096Tk94aEpKekNySlZFbWlhRDNfZDRwVHRKa3VYN0tVX2xmNzdJZ0xaWDdBR2l0a2ZWMGJfS0hfZXVBb0hBaU9IUklHanFNTEsycEJUYmdQM0R3RQ?oc=5"
+      "title": "Swimming at Christie Lake Conservation Area closed due to blue-green algae — again - The Spec",
+      "source": "The Spec",
+      "date": "05 Aug 2026",
+      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPS2dwaUZtSGw2bC1jNE5MR1dlRVp5Vng5X2pfaFJBQTdBRExxcE1CVVg2LUxDMVhwcFZkYUs0ZUYxUzNodEc2dUNEdVVDWUVTVm5WYXlPclFET0pYYVVwMktDYUVsNS13OWNCd1owMHlnQ21rWjFoLXNXYXZYTTVRSVhuT3RzNEdyTmJ2M29wREsyUm9pMkZacmdnRWVQVEpjUm12MmdQcGtjQUhERjFCOVFvMEJMdVB2MjA5cl9zNl92QWRMOTl2emd4UWprbFB3bWlfZFZ2dTJmdWc?oc=5"
     },
     {
-      "title": "Blue-green algae prompts closure of Pier 4 Beach - FlamboroughToday.com",
-      "source": "FlamboroughToday.com",
-      "date": "28 July 2026",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQLWZIRWZvVV9MQlowS1E4YVBDbEtPZjNaUlluZkR0NUhSczhsTEx2V3QwY1Rib0NBdVBEWWR3eDdxWWg4QjJRRHJFLW5Tb0hyTVBUTnJZSjlrM3BlS0FzVDRmVkhoMUNfSVphT3R1OGM1ZlZNNmRLWWdIeEFwNUdfVVJyOERGXzBiX18yRFNkVU5vNXVSazd4TmtEN0p4Rzg3ZDc4?oc=5"
+      "title": "Hamilton Conservation Authority acquires more than 200 acres of provincially significant natural lands - Hamilton Conservation Authority",
+      "source": "Hamilton Conservation Authority",
+      "date": "31 July 2026",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQTlBWLVVRaEhUSjJIT3NfekhfRGg0ZzJzc0RtTlNEMzNSSFNmYkVJbmZsMjRGc21Lb3ZBMnI1QVBjN1l6cFlRVHRSQlU2MXM2MHZLS2pKei1OZG1WQ3k0MVBoNHFLQ3hYS3lIYVhCd0poN1dpdS1uSjJJVWVURW1lVVJ2NEc4UHQ2Q0FyMjFRV1ZhamVWTkdYU21VU2lCVW03VV95elUxRk9iMms?oc=5"
+    },
+    {
+      "title": "Christie Lake Conservation Area Reopens August 1 - Hamilton Conservation Authority",
+      "source": "Hamilton Conservation Authority",
+      "date": "31 July 2026",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNNXRYc3JRc1h5NFg0YXdhM0FPeUxsdVhqSWNMV0tZRlVHZlhsd2RQZGE4alpkbmZNdXhQWENEaFFsRFp0ajBsU01sd3kyRFR4ZzJrQmJjTjQ5emlzNFBNRHdqS1p0U1dkZFN0dFY1Nmt2dUIxRjhVYWZtMzBGc2lOQTlXUkk5QQ?oc=5"
     },
     {
       "title": "Harmful blue-green algae closes Hamilton beach - CHCH",
       "source": "CHCH",
-      "date": "28 July 2026",
+      "date": "29 July 2026",
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNM013Mk0zbGNqaE9uOTBrM01jWGRsS3UtTFpBME5OV1dfNDg4Y2pxOGl5aDhXY2JUdHFtZGFGQ1RtLWpSQUsxZmxvQzhfaS1rUzlkb0Vub1c2dll5X20xWTFVQW9WSUhCbmlQS2RXTW5UbzdzWlBJNGFPOGVYcGRrcTlHcjE?oc=5"
     },
     {
-      "title": "City closes Pier 4 Park beach due to blue-algae bloom - The Spec",
-      "source": "The Spec",
-      "date": "28 July 2026",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOdlZReEJWYkJzZExKSXR5ZFJwa0VENkJvQWxHUWdsenRSRkJ0MWMxTEpSZ1hWWldJRHFWdEtBeGdrNFBEaF95NUZwa1RiRXpTYnU3NElsREpreFBKYmgwZEFRRU5xMnFoREVORTA3Qll0Mk9ZX1IzV1psU1BycFN5SEFBOTRaTXlsTXZlMG1BWFduaGlXcXpHSnZsbjZJYjJMVkN1UWRVY01iVDcwVGNNcjlENEhGdw?oc=5"
-    },
-    {
-      "title": "Hamilton’s Pier 4 Park Beach closed due to toxin-producing blue-green algae - CP24",
-      "source": "CP24",
-      "date": "27 July 2026",
-      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNRGZBVS1rNV9zTVdsS1B3MXdMZ2ZlMHBwRU5vV2NqNTlVM05QaFpmMEpGTmhWa3MyWTZnVlo3ejI0VHc2WlRlOExMY05hUjhBTzhBNWduZGR0b1BhYVF0OVVTNnROY24yWmhVYnFlU3N4SmZ0a2dKQ3E5eTh2R2pMZ3AzS2FxN0pfckVXeHFDOFotbHdJamJFTUhVRG14UmEyVVNfOE1wc2ZLSkktYkM1Vnd1OEp0VmRhVVhnLUllTQ?oc=5"
-    },
-    {
-      "title": "Toxic blue-green algae closes Hamilton's Pier 4 beach - cbc.ca",
-      "source": "cbc.ca",
+      "title": "Toxic blue-green algae closes Hamilton's Pier 4 beach - CBC",
+      "source": "CBC",
       "date": "27 July 2026",
       "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOVXJmX1UwN2NzbjJ1TWl5VWh6M1pYSXdXRk54d3JGbEVjb3lVTE1COERsNUpYLUJaQ2pRdEYwSGl1b1h4c2o1bWY3d1BUaU43dEF5TnJvNjN5eURKVWJWQV85cS1jbk5ZTzA1RXV5VU9oUnp2Z0JuU2JyQjFIeWNOTXk4UlhDT1dJMVpXRW5WSDI?oc=5"
     },
     {
-      "title": "Christie Lake closed for swimming due to blue-green algae - The Spec",
-      "source": "The Spec",
+      "title": "Hamilton’s Pier 4 Park Beach closed due to toxin-producing blue-green algae - CTV News",
+      "source": "CTV News",
+      "date": "27 July 2026",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQb1RQMGozTUJhRVBEMFlvbE02Q050UHZleXNSdFZMbVFuV1NCTkc2dzRNaFFWYm91dE5YY1A3VVpwSUt6Sm1TYmNyNnpQdGpicXJzeXdtcTBFS3BQLWpSX1MyR2hpQTRyZTVubmpuLVI3UnVwVTlYMmNpbS1sVTM4T1JLTVNTSmE0NDN6dURBUVdqaURudms4UlVDcWlKZFZQZXBSZllQSlAybEQzM3lhc05QUC1XUjdlMG43Nm11STAzaGFLdW83Yg?oc=5"
+    },
+    {
+      "title": "Christie Lake closed for swimming due to blue-green algae - thespec.com",
+      "source": "thespec.com",
       "date": "25 July 2026",
       "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNS2lSeG1lTUxzbExNRmstbEJRYjlGcXQ1a3lkLXlDZ2UtVUJHejhteUFSSVhjTk5rVUU1Y0xma3A3SWFpa0tBNlBtam1fV0d0MFlidWRFZ0Zlb1FGWDRVR1JOZjQzbUx5Z0FUd3FEbUN2NmttT25wb2JTNy0zeHlxd3lKRW9ZQnd6U2FVMWdGTzJFS1dNMjktemxSVEFFUURHZ2Y4aG5MNkV5eGJaNVlvNXY4WldCSi1rdE5uM2FVRE1oNWs?oc=5"
     },
     {
-      "title": "Great Lakes - Flora, Fauna, Ecosystems - Encyclopedia Britannica",
-      "source": "Encyclopedia Britannica",
-      "date": "25 July 2026",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5vTzlHYzMyRk5aUUlrbnc1c3JfMU9ZYTZNMjIzQWZacXhmTm5YUFloa3JPOUFYUE81eUtBc19UX1VEcUhEeUJZdE8wcjMxWF9FWkd5cHpmdzhNZTJwTWh4WEsxaVQwZmYtSVUwMHJPLXFtV1ps?oc=5"
-    },
-    {
-      "title": "Mysterious ocean phenomenon surrounds Aussie tourist island: 'Smells bad' - Yahoo News Australia",
-      "source": "Yahoo News Australia",
-      "date": "25 July 2026",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPelppOFR6SFd0cklvQ3NLdC1ndUh0bVBEcmZET1ozemduVHc4bmNnWTZ0SHdfUWVOdk5FOGRnUm53UUVKZDhKWmJ6VDlOell4d1A1OXkzUDJ0QmVBR18xVlRhb19zMnJlVHlPWmhLMEhabHkxR3N0RDNhaHNYa09feGt4NnE0bFR5Skk0aEo5cTZIQTBNa014WDdNVWs5UDdKUm1OTHJHQkhIdnJ1dmtxQw?oc=5"
-    },
-    {
-      "title": "Toxic blue-green algae health alert issued for parts of Lake Okeechobee - WPEC",
-      "source": "WPEC",
+      "title": "Aug. 5: Beach at Christie Lake closed due to presence of blue-green algae - Hamilton Conservation Authority",
+      "source": "Hamilton Conservation Authority",
       "date": "24 July 2026",
-      "url": "https://news.google.com/rss/articles/CBMivgJBVV95cUxObzZ3OEY2YVgyVV9vcFp5RXlfcXVLd0RfbV9jemM0VU50bnAzajYwRUR5Vk1uTUJEMUZsVGFJcktSRlBEQ1lHYWc2SU02RE9ZS2JEUUNVOWFiWXBRbngwbXE1QUNleW1vR0RuWFdVTDdPWUJuMmZ4aHdRS1RZdndNVDRpcEVIUUNGYUlDNXpGWXlRWHhFSnFGZlFaUTZkVk5KQjZJNkxYc3MxUWJoQWk1TWVDeEVJWkttRkxvMlBwenViTmEzZkdNdXZCTV9ScGdSZFY5RXN2X1RFMG94N1NCN0l2NWNXaTNPdlk3WEZkR2FneGI5TGxhS2J5dWZiUzVJeWF4R0JlTDVEVGx2MFlqcUcwb0RBZVJIb1J2dng5Z0M3ZWkxYld2cjZlZlRzdl9VWnZNWjB4d2pHNC1OU3c?oc=5"
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNVktBTjRnS3VYS0J0MmxvcHVzMTlMN3NJS2lnSThPZFlsaFhOX3VmVFEtdVkwQVlqTlhCRGZlZ0tTSXgzYlJDNEkwS2JfdDFicGktQm14VENReE5UY3dLOWVKQmV6OTRZT3NpUVB2UDQ0anVnWGhPUmY1dnhKSEh6MWVRVTVCdVdvNUhfa1JEQl85dlh0S2V4X05CTTcwWDQ?oc=5"
     }
   ]
 }
