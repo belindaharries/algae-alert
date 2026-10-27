@@ -300,6 +300,14 @@ export function accrueHistory(warnings, histPath = HIST){
 }
 
 async function main(){
+  // The weekly update is now done by a Claude scheduled task, which reads every
+  // authority page itself and pushes data.json. The GitHub Action still fires on
+  // its old schedule (removing that needs a token with the workflow scope), so
+  // refuse to rebuild data.json under Actions rather than overwrite the real feed.
+  if(process.env.GITHUB_ACTIONS){
+    console.log('Skipping: data.json is maintained by the weekly Claude task; this scraper is kept only for GEOCODE and accrueHistory.');
+    return;
+  }
   const warnings = [];
   const sourcesOut = [];
 
