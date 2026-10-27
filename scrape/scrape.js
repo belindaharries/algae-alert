@@ -49,7 +49,9 @@ const GEOCODE = {
   'lake pertobe':[-38.39,142.48], 'lake hamilton':[-37.745,142.02],
   'lake guthridge':[-38.108,147.072], 'lake wallace':[-37.038,141.29],
   'caulfield park lake':[-37.878,145.023], 'lake daylesford':[-37.348,144.148], 'jubilee lake':[-37.36,144.17],
-  'lake colac':[-38.283,143.633], 'green hill lake':[-37.284,142.928], 'gippsland lakes':[-37.88,147.75]
+  'lake colac':[-38.283,143.633], 'green hill lake':[-37.284,142.928], 'gippsland lakes':[-37.88,147.75],
+  // Added Oct 2026 weekly update
+  'merrimu reservoir':[-37.62,144.52], 'lake bullen merri':[-38.25,143.10]
 };
 const coordsFor = (name) => GEOCODE[name.trim().toLowerCase()] || [null, null];
 

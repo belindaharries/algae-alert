@@ -1,8 +1,8 @@
 {
-  "generated": "2026-07-18",
+  "generated": "2026-10-27",
   "coverage_start": "2020-02-13",
-  "coverage_end": "2026-05-13",
-  "event_count": 63,
+  "coverage_end": "2026-10-27",
+  "event_count": 65,
   "undated_count": 1,
   "note": "Historical record — NOT current status. Reconstructed from dated authority notices, government reports and news. Confidence flagged per event.",
   "events": [
@@ -1461,7 +1461,8 @@
       ],
       "confidence": "high",
       "sources_merged": 3,
-      "notes": "GMW warnings list (fetched 17 July 2026): warning issued 23 March 2026, still active as of 17 July 2026. Corroborated by Shepparton News (24 March 2026); described as the 10th Eildon alert since 2004. Applies to all locations incl. Main Arm, Goughs Bay, Jamieson, Delatite, Bonnie Doon."
+      "notes": "GMW warnings list (fetched 17 July 2026): warning issued 23 March 2026, still active as of 17 July 2026. Corroborated by Shepparton News (24 March 2026); described as the 10th Eildon alert since 2004. Applies to all locations incl. Main Arm, Goughs Bay, Jamieson, Delatite, Bonnie Doon.",
+      "_managed": true
     },
     {
       "id": "goulburn-lake-eppalock-2026-03",
@@ -1536,6 +1537,54 @@
       "confidence": "high",
       "sources_merged": 3,
       "notes": "Council media release published 13 May 2026: do not swim / avoid direct contact with blue-green algae affected water at Lake Victoria, Maryborough. Distinct from the 4 Apr 2025 warning. No cell count. End unknown."
+    },
+    {
+      "id": "goulburn-lake-boga-2026-10",
+      "waterbody": "Lake Boga",
+      "lat": -35.46,
+      "lng": 143.63,
+      "authority": "Goulburn-Murray Water",
+      "region": "Goulburn-Murray Water area",
+      "level": "warning",
+      "cell_count_max": null,
+      "cell_count_avg": null,
+      "start_date": "2026-10-22",
+      "end_date": null,
+      "duration_days": null,
+      "year": 2026,
+      "season": "spring",
+      "source_type": "authority-scraper",
+      "source_url": "https://www.g-mwater.com.au/water-operations/bga",
+      "source_urls": [
+        "https://www.g-mwater.com.au/water-operations/bga"
+      ],
+      "confidence": "high",
+      "_managed": true,
+      "notes": "GMW warning issued 22 October 2026 (customer notice); listed as Warning on the GMW BGA page updated 23 October 2026. Detected by the weekly update."
+    },
+    {
+      "id": "southern-merrimu-reservoir-2026-10",
+      "waterbody": "Merrimu Reservoir",
+      "lat": -37.62,
+      "lng": 144.52,
+      "authority": "Southern Rural Water",
+      "region": "Southern Rural Water area",
+      "level": "warning",
+      "cell_count_max": null,
+      "cell_count_avg": null,
+      "start_date": "2026-10-27",
+      "end_date": null,
+      "duration_days": null,
+      "year": 2026,
+      "season": "spring",
+      "source_type": "authority-scraper",
+      "source_url": "https://www.srw.com.au/water-and-storage/warnings/blue-green-algae",
+      "source_urls": [
+        "https://www.srw.com.au/water-and-storage/warnings/blue-green-algae"
+      ],
+      "confidence": "high",
+      "_managed": true,
+      "notes": "Detected by the weekly scraper from the authority warnings page."
     }
   ],
   "undated_events": [

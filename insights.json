@@ -1,13 +1,13 @@
 {
-  "generated": "2026-07-18",
+  "generated": "2026-10-27",
   "coverage_years": [
     2020,
     2026
   ],
   "coverage_note": "Reconstructed from dated authority notices, government reports and news for 2020–2026. Earlier years and less-publicised lakes are under-counted; treat counts as a floor, not a census.",
   "totals": {
-    "events": 63,
-    "waterbodies": 33,
+    "events": 65,
+    "waterbodies": 34,
     "undated_known_blooms": 1,
     "events_with_known_duration": 17
   },
@@ -18,13 +18,13 @@
     "2023": 10,
     "2024": 13,
     "2025": 23,
-    "2026": 7
+    "2026": 9
   },
   "season_histogram": {
     "summer": 26,
     "autumn": 28,
     "winter": 3,
-    "spring": 6
+    "spring": 8
   },
   "month_histogram": {
     "Jan": 11,
@@ -36,7 +36,7 @@
     "Jul": 2,
     "Aug": 1,
     "Sep": 0,
-    "Oct": 2,
+    "Oct": 4,
     "Nov": 4,
     "Dec": 5
   },
@@ -135,7 +135,7 @@
       0,
       0,
       0,
-      0,
+      2,
       0,
       0
     ]
@@ -211,8 +211,8 @@
       "years_active": 2
     },
     {
-      "waterbody": "Cairn Curran Reservoir",
-      "events": 2,
+      "waterbody": "Lake Boga",
+      "events": 3,
       "years_active": 2
     }
   ],
@@ -484,6 +484,30 @@
       "best_confidence": "high"
     },
     {
+      "waterbody": "Lake Boga",
+      "lat": -35.46,
+      "lng": 143.63,
+      "region": "Kerang Lakes / Murray",
+      "authority": "Goulburn-Murray Water",
+      "event_count": 3,
+      "years_active": [
+        2025,
+        2026
+      ],
+      "years_active_count": 2,
+      "first_seen": "2025-03-20",
+      "last_seen": "2026-10-22",
+      "recurring": false,
+      "avg_duration_days": null,
+      "max_duration_days": null,
+      "typical_season": "spring",
+      "typical_months": [
+        "Mar",
+        "Nov"
+      ],
+      "best_confidence": "high"
+    },
+    {
       "waterbody": "Cairn Curran Reservoir",
       "lat": -37.02,
       "lng": 143.98,
@@ -617,29 +641,6 @@
       "years_active_count": 2,
       "first_seen": "2024-03-14",
       "last_seen": "2025-11-07",
-      "recurring": false,
-      "avg_duration_days": null,
-      "max_duration_days": null,
-      "typical_season": "autumn",
-      "typical_months": [
-        "Mar",
-        "Nov"
-      ],
-      "best_confidence": "high"
-    },
-    {
-      "waterbody": "Lake Boga",
-      "lat": -35.46,
-      "lng": 143.63,
-      "region": "Kerang Lakes / Murray",
-      "authority": "Goulburn-Murray Water",
-      "event_count": 2,
-      "years_active": [
-        2025
-      ],
-      "years_active_count": 1,
-      "first_seen": "2025-03-20",
-      "last_seen": "2025-11-19",
       "recurring": false,
       "avg_duration_days": null,
       "max_duration_days": null,
@@ -1041,6 +1042,29 @@
         "May"
       ],
       "best_confidence": "medium"
+    },
+    {
+      "waterbody": "Merrimu Reservoir",
+      "lat": -37.62,
+      "lng": 144.52,
+      "region": "Southern Rural Water area",
+      "authority": "Southern Rural Water",
+      "event_count": 1,
+      "years_active": [
+        2026
+      ],
+      "years_active_count": 1,
+      "first_seen": "2026-10-27",
+      "last_seen": "2026-10-27",
+      "recurring": false,
+      "avg_duration_days": null,
+      "max_duration_days": null,
+      "typical_season": "spring",
+      "typical_months": [
+        "Oct",
+        "Oct"
+      ],
+      "best_confidence": "high"
     }
   ],
   "highlights": [
@@ -1053,8 +1077,8 @@
     "Gippsland Lakes has had 3 recorded blue-green algae warnings since 2020, almost always in autumn.",
     "Laanecoorie Reservoir has had 3 recorded blue-green algae warnings since 2020, almost always in autumn.",
     "Green Lake has had 3 recorded blue-green algae warnings since 2020, almost always in autumn.",
+    "Lake Boga has had 3 recorded blue-green algae warnings since 2020, almost always in spring.",
     "Cairn Curran Reservoir has had 2 recorded blue-green algae warnings since 2020, almost always in summer, with the longest lasting about 202 days.",
-    "Spavin Lake has had 2 recorded blue-green algae warnings since 2020, mostly across summer and autumn, with the longest lasting about 75 days.",
-    "Lake Lonsdale has had 2 recorded blue-green algae warnings since 2020, mostly across autumn and spring."
+    "Spavin Lake has had 2 recorded blue-green algae warnings since 2020, mostly across summer and autumn, with the longest lasting about 75 days."
   ]
 }
