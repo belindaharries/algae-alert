@@ -1,0 +1,404 @@
+{
+  "updated": "2026-10-28",
+  "note": "Every page the weekly task reads. Add a state here first; the map, the filters and the signup form all read this file. hidden:true keeps a source out of the Sources panel.",
+  "states": {
+    "VIC": {
+      "name": "Victoria",
+      "regions": [
+        "Northern Victoria",
+        "Central Highlands",
+        "Wimmera & Mallee",
+        "Sunraysia / north-west",
+        "Gippsland",
+        "Greater Melbourne",
+        "South-west Victoria"
+      ]
+    },
+    "NSW": {
+      "name": "New South Wales",
+      "regions": [
+        "Murray & Riverina",
+        "Lachlan & Central West",
+        "Macquarie, Namoi & North West",
+        "Far West & Darling",
+        "Hunter & Central Coast",
+        "Sydney, Illawarra & Blue Mountains",
+        "New England & North Coast",
+        "South Coast & Monaro"
+      ]
+    },
+    "QLD": {
+      "name": "Queensland",
+      "regions": [
+        "South East Queensland",
+        "Wide Bay & Burnett",
+        "Darling Downs & South West",
+        "Central Queensland",
+        "North Queensland",
+        "North West & Gulf",
+        "Far North Queensland"
+      ]
+    }
+  },
+  "sources": [
+    {
+      "id": "goulburn-murray-water",
+      "state": "VIC",
+      "authority": "Goulburn-Murray Water",
+      "area": "Northern Victoria — lakes, weirs & channels",
+      "region": "Northern Victoria",
+      "kind": "corp",
+      "url": "https://www.g-mwater.com.au/water-operations/bga",
+      "type": "table",
+      "notes": "Status column: only Warning, Alert or Caution rows count; \"No Current Warning\" rows do not."
+    },
+    {
+      "id": "gwmwater",
+      "state": "VIC",
+      "authority": "GWMWater",
+      "area": "Wimmera & Mallee",
+      "region": "Wimmera & Mallee",
+      "kind": "corp",
+      "url": "https://www.gwmwater.org.au/using-lakes-and-reservoirs/rec-algae-warnings",
+      "type": "phrase",
+      "notes": "Page states whether there are current warnings; quote the sentence."
+    },
+    {
+      "id": "lower-murray-water",
+      "state": "VIC",
+      "authority": "Lower Murray Water",
+      "area": "Sunraysia & north-west",
+      "region": "Sunraysia / north-west",
+      "kind": "corp",
+      "url": "https://www.lmw.vic.gov.au/water-supply-and-services/water-quality-and-treatment/blue-green-algae/",
+      "type": "phrase",
+      "notes": "Page states whether there are current warnings; quote the sentence."
+    },
+    {
+      "id": "southern-rural-water",
+      "state": "VIC",
+      "authority": "Southern Rural Water",
+      "area": "Gippsland & southern storages",
+      "region": "Gippsland",
+      "kind": "corp",
+      "url": "https://www.srw.com.au/water-and-storage/warnings/blue-green-algae",
+      "type": "phrase",
+      "notes": "Page states whether there are current warnings; quote the sentence."
+    },
+    {
+      "id": "melbourne-water",
+      "state": "VIC",
+      "authority": "Melbourne Water",
+      "area": "Greater Melbourne waterways",
+      "region": "Greater Melbourne",
+      "kind": "corp",
+      "url": "https://www.melbournewater.com.au/",
+      "type": "page",
+      "notes": "Read the page and any news items for current algae warnings."
+    },
+    {
+      "id": "gippsland-lakes-coastal",
+      "state": "VIC",
+      "authority": "Gippsland Lakes (coastal)",
+      "area": "East Gippsland — coastal lakes",
+      "region": "Gippsland",
+      "kind": "corp",
+      "url": "https://www.water.vic.gov.au/waterways/blue-green-algae",
+      "type": "page",
+      "notes": "Read the page and any news items for current algae warnings."
+    },
+    {
+      "id": "coliban-water",
+      "state": "VIC",
+      "authority": "Coliban Water",
+      "area": "Bendigo, Castlemaine, Kyneton storages",
+      "region": "Central Highlands",
+      "kind": "corp",
+      "url": "https://www.coliban.com.au/",
+      "type": "page",
+      "notes": "Check for a blue-green algae or recreational water page and news."
+    },
+    {
+      "id": "barwon-water",
+      "state": "VIC",
+      "authority": "Barwon Water",
+      "area": "Geelong and Surf Coast storages",
+      "region": "South-west Victoria",
+      "kind": "corp",
+      "url": "https://www.barwonwater.vic.gov.au/",
+      "type": "page",
+      "notes": "Check for a blue-green algae or recreational water page and news."
+    },
+    {
+      "id": "city-of-ballarat",
+      "state": "VIC",
+      "authority": "City of Ballarat",
+      "area": "Lake Burrumbeet, Lake Wendouree",
+      "region": "Central Highlands",
+      "kind": "council",
+      "url": "https://www.ballarat.vic.gov.au/news/blue-green-algae-closes-lake-burrumbeet",
+      "type": "page",
+      "notes": "Find the council's current algae page or newest algae news item; apply the 60-day rule."
+    },
+    {
+      "id": "city-of-casey",
+      "state": "VIC",
+      "authority": "City of Casey",
+      "area": "Wilson Botanic Park Lake, Berwick",
+      "region": "Greater Melbourne",
+      "kind": "council",
+      "url": "https://www.casey.vic.gov.au/blue-green-algae",
+      "type": "page",
+      "notes": "Find the council's current algae page or newest algae news item; apply the 60-day rule."
+    },
+    {
+      "id": "central-goldfields-shire",
+      "state": "VIC",
+      "authority": "Central Goldfields Shire",
+      "area": "Lake Victoria, Maryborough",
+      "region": "Central Highlands",
+      "kind": "council",
+      "url": "https://www.centralgoldfields.vic.gov.au/Whats-Happening/Latest-News/Media-Releases/BLUE-GREEN-ALGAE-BGA-WARNING-FOR-LAKE-VICTORIA",
+      "type": "page",
+      "notes": "Find the council's current algae page or newest algae news item; apply the 60-day rule."
+    },
+    {
+      "id": "darebin-city",
+      "state": "VIC",
+      "authority": "Darebin City",
+      "area": "Edwardes Lake, Reservoir",
+      "region": "Greater Melbourne",
+      "kind": "council",
+      "url": "https://www.darebin.vic.gov.au/Waste-environment-and-climate/Natural-environment/Algal-blooms-at-Edwardes-Lake",
+      "type": "page",
+      "notes": "Find the council's current algae page or newest algae news item; apply the 60-day rule."
+    },
+    {
+      "id": "city-of-greater-geelong",
+      "state": "VIC",
+      "authority": "City of Greater Geelong",
+      "area": "Balyang, Eastern Park, Blue Waters, Lake Lorne, St Leonards",
+      "region": "South-west Victoria",
+      "kind": "council",
+      "url": "https://www.geelongaustralia.com.au",
+      "type": "page",
+      "notes": "Find the council's current algae page or newest algae news item; apply the 60-day rule."
+    },
+    {
+      "id": "greater-shepparton-city",
+      "state": "VIC",
+      "authority": "Greater Shepparton City",
+      "area": "Kialla Lakes, Lake Bartlett, Craigmuir Lake",
+      "region": "Northern Victoria",
+      "kind": "council",
+      "url": "https://greatershepparton.com.au",
+      "type": "page",
+      "notes": "Find the council's current algae page or newest algae news item; apply the 60-day rule."
+    },
+    {
+      "id": "hume-city",
+      "state": "VIC",
+      "authority": "Hume City",
+      "area": "Spavin Lake, Sunbury",
+      "region": "Greater Melbourne",
+      "kind": "council",
+      "url": "https://www.hume.vic.gov.au",
+      "type": "page",
+      "notes": "Find the council's current algae page or newest algae news item; apply the 60-day rule."
+    },
+    {
+      "id": "knox-city",
+      "state": "VIC",
+      "authority": "Knox City",
+      "area": "Quarry Lake, Ferntree Gully",
+      "region": "Greater Melbourne",
+      "kind": "council",
+      "url": "https://www.knox.vic.gov.au/our-services/gardens-environment-and-sustainability/quarry-lake-water-quality",
+      "type": "page",
+      "notes": "Find the council's current algae page or newest algae news item; apply the 60-day rule."
+    },
+    {
+      "id": "nillumbik-shire",
+      "state": "VIC",
+      "authority": "Nillumbik Shire",
+      "area": "Yarrambat Lake",
+      "region": "Greater Melbourne",
+      "kind": "council",
+      "url": "https://www.nillumbik.vic.gov.au/Community/Public-health-and-safety/Blue-green-algae-in-our-waterways",
+      "type": "page",
+      "notes": "Find the council's current algae page or newest algae news item; apply the 60-day rule."
+    },
+    {
+      "id": "whitehorse-city",
+      "state": "VIC",
+      "authority": "Whitehorse City",
+      "area": "Blackburn Lake, Surrey Dive",
+      "region": "Greater Melbourne",
+      "kind": "council",
+      "url": "https://www.whitehorse.vic.gov.au/living-working/emergencies/types-emergencies/blue-green-algae",
+      "type": "page",
+      "notes": "Find the council's current algae page or newest algae news item; apply the 60-day rule."
+    },
+    {
+      "id": "yarra-ranges-council",
+      "state": "VIC",
+      "authority": "Yarra Ranges Council",
+      "area": "Lillydale Lake",
+      "region": "Greater Melbourne",
+      "kind": "council",
+      "url": "https://www.yarraranges.vic.gov.au",
+      "type": "page",
+      "notes": "Find the council's current algae page or newest algae news item; apply the 60-day rule."
+    },
+    {
+      "id": "ararat-rural-city",
+      "state": "VIC",
+      "authority": "Ararat Rural City",
+      "area": "Lake Bolac, Green Hill Lake",
+      "region": "Wimmera & Mallee",
+      "kind": "council",
+      "url": "https://www.ararat.vic.gov.au/news/blue-green-algae-warning-issued-lake-bolac",
+      "type": "page",
+      "notes": "Find the council's current algae page or newest algae news item; apply the 60-day rule."
+    },
+    {
+      "id": "horsham-rural-city",
+      "state": "VIC",
+      "authority": "Horsham Rural City",
+      "area": "Green Lake, Wimmera waterways",
+      "region": "Wimmera & Mallee",
+      "kind": "council",
+      "url": "https://www.hrcc.vic.gov.au/Our-Council/News-and-Media/Latest-News/Green-Lake-algae-warning",
+      "type": "page",
+      "notes": "Find the council's current algae page or newest algae news item; apply the 60-day rule."
+    },
+    {
+      "id": "west-wimmera-shire",
+      "state": "VIC",
+      "authority": "West Wimmera Shire",
+      "area": "Lake Wallace, Edenhope",
+      "region": "Wimmera & Mallee",
+      "kind": "council",
+      "url": "https://www.westwimmera.vic.gov.au/Council/News-and-media/Latest-News/Blue-green-algae-warning-Lake-Wallace",
+      "type": "page",
+      "notes": "Find the council's current algae page or newest algae news item; apply the 60-day rule."
+    },
+    {
+      "id": "southern-grampians-shire",
+      "state": "VIC",
+      "authority": "Southern Grampians Shire",
+      "area": "Lake Hamilton",
+      "region": "Wimmera & Mallee",
+      "kind": "council",
+      "url": "https://www.sthgrampians.vic.gov.au",
+      "type": "page",
+      "notes": "Find the council's current algae page or newest algae news item; apply the 60-day rule."
+    },
+    {
+      "id": "swan-hill-rural-city",
+      "state": "VIC",
+      "authority": "Swan Hill Rural City",
+      "area": "Lake Boga",
+      "region": "Northern Victoria",
+      "kind": "council",
+      "url": "https://www.swanhill.vic.gov.au",
+      "type": "page",
+      "notes": "Find the council's current algae page or newest algae news item; apply the 60-day rule."
+    },
+    {
+      "id": "wellington-shire",
+      "state": "VIC",
+      "authority": "Wellington Shire",
+      "area": "Lake Guthridge, Sale",
+      "region": "Gippsland",
+      "kind": "council",
+      "url": "https://www.wellington.vic.gov.au",
+      "type": "page",
+      "notes": "Find the council's current algae page or newest algae news item; apply the 60-day rule."
+    },
+    {
+      "id": "greater-bendigo-city",
+      "state": "VIC",
+      "authority": "Greater Bendigo City",
+      "area": "Lake Neangar, Eaglehawk",
+      "region": "Central Highlands",
+      "kind": "council",
+      "url": "https://www.bendigo.vic.gov.au",
+      "type": "page",
+      "notes": "Find the council's current algae page or newest algae news item; apply the 60-day rule."
+    },
+    {
+      "id": "warrnambool-city",
+      "state": "VIC",
+      "authority": "Warrnambool City",
+      "area": "Lake Pertobe",
+      "region": "South-west Victoria",
+      "kind": "council",
+      "url": "https://www.warrnambool.vic.gov.au",
+      "type": "page",
+      "notes": "Find the council's current algae page or newest algae news item; apply the 60-day rule."
+    },
+    {
+      "id": "waternsw",
+      "state": "NSW",
+      "authority": "WaterNSW",
+      "area": "Rivers, dams and weirs across NSW",
+      "region": "All NSW",
+      "kind": "corp",
+      "url": "https://www.waternsw.com.au/water-services/water-quality/algae-alerts",
+      "type": "alerts",
+      "notes": "Map page plus dated alert pages (Red, Amber, Green). Each alert page states waterbody, level, date and advice; a later page can lift an alert. Assign each warning to the NSW region list.",
+      "feeds": [
+        "https://www.waternsw.com.au/about/newsroom?queries_type_query=algal-alerts"
+      ]
+    },
+    {
+      "id": "waternsw-api",
+      "state": "NSW",
+      "authority": "WaterNSW Water Quality API",
+      "area": "Algal sample counts by monitoring station",
+      "region": "All NSW",
+      "kind": "api",
+      "url": "https://api.waternsw.com.au/external/v1/water-quality-external-api",
+      "type": "api",
+      "notes": "Cross-check only. Key lives in the Envirosonic folder (waternsw_api_primary_key.txt), never in the repo. Header Ocp-Apim-Subscription-Key. Limits: 1 StationGroup, 10 StationIds, 1 DataType, 3 AlgalGroups, 1 SampleType per request; 12-month max span.",
+      "hidden": true
+    },
+    {
+      "id": "nsw-racc",
+      "state": "NSW",
+      "authority": "Regional Algal Coordinating Committees",
+      "area": "Murray, Lachlan, Macquarie, Namoi, Far West weekly reports",
+      "region": "Murray & Riverina",
+      "kind": "corp",
+      "url": "https://www.dpird.nsw.gov.au/agriculture/water/quality/pubs-and-info/blue-green-algae",
+      "type": "page",
+      "notes": "Weekly RACC reports are republished by councils (Balranald, Wentworth, Bogan, Central Darling). Use to confirm Murray river reaches on both banks."
+    },
+    {
+      "id": "sunwater",
+      "state": "QLD",
+      "authority": "Sunwater",
+      "area": "59 regional dams and weirs",
+      "region": "All Queensland",
+      "kind": "corp",
+      "url": "https://www.sunwater.com.au/category/recreation-safety-alerts/",
+      "type": "posts",
+      "notes": "Dated posts, newest first; each names the dam and the level (Red or Amber) and later posts lift alerts. RSS at /category/recreation-safety-alerts/feed/.",
+      "feeds": [
+        "https://www.sunwater.com.au/category/recreation-safety-alerts/feed/"
+      ]
+    },
+    {
+      "id": "seqwater",
+      "state": "QLD",
+      "authority": "Seqwater",
+      "area": "17 south-east Queensland lakes",
+      "region": "South East Queensland",
+      "kind": "corp",
+      "url": "https://www.seqwater.com.au/blue-green-algae-levels",
+      "type": "levels",
+      "notes": "Level is an image with alt text (BGA low / medium / high), no dates. Treat High as a red warning, Medium as amber \"elevated\", Low as clear. Record the date the level was first seen."
+    }
+  ]
+}

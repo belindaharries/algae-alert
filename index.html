@@ -3,7 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Blue-Green Algae Alert — Victoria live map</title>
+<title>Blue-Green Algae Alert — current warnings across Australia (Victoria, NSW, Queensland)</title>
+<meta name="description" content="Current blue-green algae warnings for lakes, rivers and reservoirs across Victoria, New South Wales and Queensland, gathered from every water authority and council and updated weekly.">
 <link rel="stylesheet" href="vendor/leaflet.css"/>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,6 +35,50 @@
   .topbar a.ext{color:#fff;font-size:13px;font-weight:700;border:1px solid rgba(255,255,255,.45);
     padding:6px 12px;border-radius:20px;white-space:nowrap}
   .topbar a.ext:hover{background:rgba(255,255,255,.16);text-decoration:none}
+  .topbar button.getalerts{color:#0f5285;background:#fff;font-size:13px;font-weight:800;border:0;padding:7px 14px;border-radius:20px;
+    white-space:nowrap;cursor:pointer;font-family:inherit;box-shadow:0 2px 8px rgba(0,0,0,.18)}
+  .topbar button.getalerts:hover{background:#e9f1fb}
+
+  /* Sponsor strip — Envirosonic, on every page above the map */
+  .sponsor{background:#fff;border-bottom:1px solid var(--line);padding:8px 18px;flex:0 0 auto}
+  .sponsor .inner{max-width:1120px;margin:0 auto;display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:12.5px;color:var(--ink-soft);line-height:1.45}
+  .sponsor .lg{font-weight:900;color:var(--brand-dk);font-size:13px;letter-spacing:-.01em;white-space:nowrap}
+  .sponsor .lg small{display:block;font-size:9.5px;font-weight:700;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+  .sponsor p{margin:0;flex:1 1 420px}
+  .sponsor a.cta{font-weight:800;white-space:nowrap;border:1px solid var(--brand);border-radius:20px;padding:5px 12px;font-size:12px}
+  .sponsor a.cta:hover{background:var(--sky-soft);text-decoration:none}
+
+  /* Get alerts panel — opens from the header button */
+  .alertpanel{display:none;background:var(--sky-soft);border-bottom:1px solid var(--line);padding:14px 18px;flex:0 0 auto}
+  .alertpanel.on{display:block}
+  .alertpanel .inner{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1.2fr 1fr 1fr auto;gap:12px;align-items:end}
+  .alertpanel .fld.regsfld{grid-column:1/4}
+  .alertpanel h3{grid-column:1/-1;margin:0 0 2px;font-size:15px;color:var(--teal-dk)}
+  .alertpanel h3 small{font-weight:500;color:var(--ink-soft);font-size:12.5px;margin-left:8px}
+  .alertpanel .fld label{display:block}
+  .alertpanel .regs{display:flex;flex-wrap:wrap;gap:6px;margin-top:5px;min-height:38px}
+  .alertpanel .regs label{font-size:12px;font-weight:600;color:var(--ink);text-transform:none;letter-spacing:0;border:1px solid var(--line);
+    border-radius:20px;padding:5px 10px;background:#fff;cursor:pointer;user-select:none}
+  .alertpanel .regs label.on{background:var(--brand);color:#fff;border-color:var(--brand)}
+  .alertpanel .regs label.off{opacity:.45;cursor:not-allowed}
+  .alertpanel .regs input{display:none}
+  .alertpanel .btn{margin-top:0;width:auto;padding:10px 18px;background:var(--brand);color:#fff}
+  .alertpanel .btn:hover{background:var(--brand-dk)}
+  .alertpanel .ok{grid-column:1/-1;margin-top:2px}
+  .alertpanel .priv{grid-column:1/-1;font-size:11px;color:var(--muted);margin:2px 0 0}
+  .alertpanel .close{position:absolute;right:16px;top:10px;border:0;background:none;font-size:20px;color:var(--muted);cursor:pointer}
+  .alertpanel{position:relative}
+  .sidecta{display:block;background:var(--brand);color:#fff;border-radius:12px;padding:11px 13px;margin-bottom:12px;font-weight:800;font-size:13.5px;cursor:pointer;text-align:center}
+  .sidecta:hover{background:var(--brand-dk);text-decoration:none}
+  .sidecta small{display:block;font-weight:500;font-size:11.5px;color:#d8e8f6;margin-top:2px}
+  details.stgrp{border:1px solid var(--line);border-radius:10px;margin-bottom:8px;background:#fff}
+  details.stgrp summary{cursor:pointer;padding:9px 11px;font-weight:800;font-size:13px;color:var(--teal-dk);list-style:none;display:flex;justify-content:space-between;align-items:center}
+  details.stgrp summary::-webkit-details-marker{display:none}
+  details.stgrp summary .n{font-size:11px;font-weight:700;color:var(--muted)}
+  details.stgrp summary .n.r{color:var(--red)}
+  details.stgrp .body{padding:0 11px 6px}
+  .lp .es{margin-top:8px;padding-top:7px;border-top:1px solid var(--line);font-size:11.5px;color:var(--ink-soft)}
+  .lp .es a{font-weight:800}
 
   /* Hero banner — what this is, why it matters, how to use it */
   .hero{background:linear-gradient(180deg,var(--sky-soft),#fff);border-bottom:1px solid var(--line);
@@ -168,6 +213,9 @@
     .mapwrap{height:60vh;flex:none}
     .brand h1{font-size:14px}
     .stats{grid-template-columns:1fr 1fr}
+    .alertpanel .inner{grid-template-columns:1fr 1fr}
+    .alertpanel .fld.regsfld,.alertpanel .btn{grid-column:1/-1}
+    .sponsor p{flex-basis:100%}
   }
 </style>
 </head>
@@ -176,20 +224,57 @@
 <div class="topbar">
   <div class="brand">
     <div class="dot"></div>
-    <div><h1>Blue-Green Algae Alert</h1><span>Victoria · live bloom map</span></div>
+    <div><h1>Blue-Green Algae Alert</h1><span id="brandSub">Australia · live bloom map</span></div>
   </div>
   <div class="spacer"></div>
-  <a class="ext" href="https://envirosonic.com.au" target="_blank" rel="noopener">Clear your water — Envirosonic ›</a>
+  <button class="getalerts" type="button" id="openAlerts">Get alerts for your area</button>
+  <a class="ext" href="https://envirosonic.com.au" target="_blank" rel="noopener">Envirosonic ›</a>
+</div>
+
+<div class="sponsor">
+  <div class="inner">
+    <div class="lg"><small>Published by</small>Envirosonic</div>
+    <p>Envirosonic has controlled blue-green algae in Australian reservoirs, lakes and wastewater ponds with ultrasound since 2009.
+    It adds no chemicals or metals to the water. Units are built and supported in Australia.</p>
+    <a class="cta" href="https://envirosonic.com.au/contact-us/" target="_blank" rel="noopener">Ask about a free water body assessment ›</a>
+  </div>
+</div>
+
+<div class="alertpanel" id="alertpanel">
+  <button class="close" type="button" id="closeAlerts" aria-label="Close">×</button>
+  <form name="algae-alerts" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="signupForm" class="inner">
+    <h3>Get alerts for your area <small>We email you when a warning is issued for a region you choose. Nothing else.</small></h3>
+    <input type="hidden" name="form-name" value="algae-alerts">
+    <p class="hidden"><label>Leave blank: <input name="bot-field"></label></p>
+    <div class="fld"><label for="em">Email</label>
+      <input type="email" id="em" name="email" placeholder="you@example.com" autocomplete="email" required></div>
+    <div class="fld"><label for="ss">State</label>
+      <select id="ss" name="state" required><option value="">Choose…</option></select></div>
+    <div class="fld"><label for="sk">You are</label>
+      <select id="sk" name="role">
+        <option value="">Choose…</option>
+        <option>Resident, swimmer or pet owner</option>
+        <option>Farmer or landholder</option>
+        <option>Council or water authority</option>
+        <option>Other</option>
+      </select></div>
+    <div class="fld regsfld"><label>Regions <span id="regCount" style="font-weight:600;text-transform:none;letter-spacing:0">(choose up to 3)</span></label>
+      <div class="regs" id="regs"><span style="font-size:12px;color:var(--muted)">Pick a state first.</span></div></div>
+    <button class="btn" type="submit">Notify me</button>
+    <div class="ok" id="ok">✓ You're on the list. We'll email you when a warning is issued in your regions.</div>
+    <p class="priv">We keep your email only to send algae alerts for the regions you choose, and you can unsubscribe from any email.</p>
+  </form>
 </div>
 
 <div class="hero">
   <div class="inner">
     <div class="lead">
-      <h2>Is the water safe? Blue-green algae across Victoria</h2>
+      <h2 id="heroTitle">Is the water safe? Blue-green algae warnings across Australia</h2>
       <p>Blue-green algae (cyanobacteria) blooms can turn lakes, reservoirs and rivers toxic — unsafe
       for swimming, and a real risk to pets and livestock that drink from them. Warnings are issued
-      separately by many water authorities and councils, so this map gathers them into one place, and
-      pairs the live picture with a decade of history so you can see which waters bloom, how often, and when.</p>
+      separately by dozens of water authorities and councils, so this map gathers them into one place,
+      checks each one against the authority's own page every week, and pairs the live picture with a
+      decade of Victorian history so you can see which waters bloom, how often, and when.</p>
     </div>
     <div class="how">
       <div class="ht">How to use this map</div>
@@ -219,38 +304,17 @@
           <div class="tally a"><b id="tA">0</b><small>Reported</small></div>
           <div class="tally g"><b id="tG">0</b><small>Clear</small></div>
         </div>
-        <div class="filter">
-          <label for="rf">Filter by region</label>
-          <select id="rf"><option value="all">All of Victoria</option></select>
+        <a class="sidecta" id="sideAlerts">Get alerts for your area<small>Email when a warning is issued in up to three regions you choose</small></a>
+        <div class="filter" style="display:flex;gap:8px">
+          <div style="flex:1"><label for="sf">State</label>
+            <select id="sf"><option value="all">All states</option></select></div>
+          <div style="flex:1.3"><label for="rf">Region</label>
+            <select id="rf"><option value="all">All regions</option></select></div>
         </div>
         <div class="sec-title">Current warnings</div>
         <div id="list"></div>
         <div class="sec-title">Sources monitored</div>
         <div id="sources"></div>
-
-        <div class="signup">
-          <h3>Get alerts for your area</h3>
-          <p>We'll email you when a bloom is detected near you.</p>
-          <form name="algae-alerts" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="signupForm">
-            <input type="hidden" name="form-name" value="algae-alerts">
-            <p class="hidden"><label>Leave blank: <input name="bot-field"></label></p>
-            <div class="fld"><label for="em">Email</label>
-              <input type="email" id="em" name="email" placeholder="you@example.com" autocomplete="email" required></div>
-            <div class="fld" style="margin-top:9px"><label for="sr">Region</label>
-              <select id="sr" name="region" required>
-                <option value="">Choose your region…</option>
-                <option>Northern Victoria</option>
-                <option>Central Highlands</option>
-                <option>Wimmera &amp; Mallee</option>
-                <option>Sunraysia / north-west</option>
-                <option>Gippsland</option>
-                <option>Greater Melbourne</option>
-                <option>South-west Victoria</option>
-              </select></div>
-            <button class="btn" type="submit">Notify me</button>
-            <div class="ok" id="ok">✓ You're on the list — we'll be in touch.</div>
-          </form>
-        </div>
 
         <div class="bridge">
           <p>Found algae in your water? See what it costs to clear it — chemicals vs aerators vs ultrasound.</p>
@@ -307,7 +371,7 @@
         <div class="sec-title">Who to notify if you find a bloom</div>
 
         <div class="who"><div class="h">A lake, reservoir or channel</div>
-          <p>Contact the water corporation that manages it — Goulburn-Murray Water, GWMWater, Lower Murray Water, Southern Rural Water or Melbourne Water — or your local council for a town lake. They monitor and issue the public warnings.</p></div>
+          <p>Contact the water corporation that manages it, or your local council for a town lake. They monitor and issue the public warnings. In Victoria that is Goulburn-Murray Water, GWMWater, Lower Murray Water, Southern Rural Water or Melbourne Water; in New South Wales, WaterNSW (Algal Information Line <span class="ph">1800 999 457</span>); in Queensland, Sunwater for regional dams and Seqwater in the south-east.</p></div>
 
         <div class="who"><div class="h">Dead fish, pollution or an environmental emergency</div>
           <p>Call EPA Victoria's 24-hour pollution hotline on <span class="ph">1300 372 842</span>.</p></div>
@@ -322,6 +386,9 @@
           <p>DEECA coordinates Victoria's response through regional algal groups under the Blue-Green Algae Circular. Start with the water corporation for your area, or your council.</p></div>
 
         <div class="sec-title">Rules, policies &amp; guidance</div>
+        <div class="reg">› <a href="https://www.waternsw.com.au/water-services/water-quality/algae-alerts" target="_blank" rel="noopener">WaterNSW — algae alerts map and what Red, Amber and Green mean</a></div>
+        <div class="reg">› <a href="https://www.sunwater.com.au/community/water-and-the-environment/blue-green-algae/" target="_blank" rel="noopener">Sunwater — blue-green algae at Queensland dams</a></div>
+        <div class="reg">› <a href="https://www.seqwater.com.au/blue-green-algae-levels" target="_blank" rel="noopener">Seqwater — current algae levels at south-east Queensland lakes</a></div>
         <div class="reg">› <a href="https://www.water.vic.gov.au/__data/assets/pdf_file/0023/677300/Victorian-Blue-Green-Algae-Circular.pdf" target="_blank" rel="noopener">Victorian Blue-Green Algae Circular (DEECA)</a> — who monitors, alerts and coordinates.</div>
         <div class="reg">› <a href="https://www.water.vic.gov.au/waterways/blue-green-algae" target="_blank" rel="noopener">DEECA — harmful algal blooms overview</a></div>
         <div class="reg">› <a href="https://www.health.vic.gov.au/water/blue-green-algae-management" target="_blank" rel="noopener">Department of Health — algae management &amp; Safe Drinking Water Act 2003</a></div>
@@ -352,7 +419,7 @@
 </div>
 
 <script src="vendor/leaflet.js"></script>
-<script src="vendor/victoria-geo.js"></script>
+<script src="vendor/australia-geo.js"></script>
 <script>
 /* Fallback data so the map still works when opened locally (file://),
    where fetch() of data.json is blocked. When deployed, data.json wins. */
@@ -401,26 +468,39 @@ const COLOR={red:"#d24b3a",amber:"#e0a029",green:"#4a9d4e"};
 const LABEL={red:"Warning",amber:"Reported — verify",green:"No current warning"};
 const SHORT={red:"Warning",amber:"Reported",green:"Clear"};
 
+/* ---- states and regions (sources.json is the single list; this is the fallback) ---- */
+let STATES={
+  VIC:{name:'Victoria',regions:['Northern Victoria','Central Highlands','Wimmera & Mallee','Sunraysia / north-west','Gippsland','Greater Melbourne','South-west Victoria']},
+  NSW:{name:'New South Wales',regions:['Murray & Riverina','Lachlan & Central West','Macquarie, Namoi & North West','Far West & Darling','Hunter & Central Coast','Sydney, Illawarra & Blue Mountains','New England & North Coast','South Coast & Monaro']},
+  QLD:{name:'Queensland',regions:['South East Queensland','Wide Bay & Burnett','Darling Downs & South West','Central Queensland','North Queensland','North West & Gulf','Far North Queensland']}
+};
+const stateOf=w=>w.state||'VIC';           // rows written before stage 1 are Victorian
+const stateName=c=>(STATES[c]&&STATES[c].name)||c;
+const ES_SITE='https://envirosonic.com.au/contact-us/';
+
 /* ---- map base ---- */
-const map=L.map('map',{scrollWheelZoom:true,minZoom:5}).setView([-37.0,145.0],6);
-let vicBounds=null;
-if(window.VIC_GEO){
-  const vic=L.geoJSON(window.VIC_GEO,{style:{color:'#7fa8a0',weight:1,fillColor:'#eaf1ec',fillOpacity:1}}).addTo(map);
-  vicBounds=vic.getBounds();
+const map=L.map('map',{scrollWheelZoom:true,minZoom:3}).setView([-28.5,134.0],4);
+let auBounds=null, stateLayers={};
+if(window.AU_GEO){
+  const au=L.geoJSON(window.AU_GEO,{style:f=>({color:'#7fa8a0',weight:1,fillColor:STATES[f.properties.state]?'#eaf1ec':'#f1f4f3',fillOpacity:1}),
+    onEachFeature:(f,l)=>{stateLayers[f.properties.state]=l;}}).addTo(map);
+  auBounds=au.getBounds();
 }
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,opacity:0.85,attribution:'© OpenStreetMap contributors'}).addTo(map);
-if(vicBounds) map.fitBounds(vicBounds,{padding:[15,15]});
+const HOME_BOUNDS=L.latLngBounds([[-39.5,138.0],[-10.5,154.5]]); // the eastern states that carry alerts
+map.fitBounds(HOME_BOUNDS,{padding:[10,10]});
 setTimeout(()=>map.invalidateSize(),250);
 window.addEventListener('resize',()=>map.invalidateSize());
 
 let DATA=DATA_FALLBACK, markers={};
 
 function popupHtml(s){
+  const es = s.level==='red' ? `<div class="es">Managing a waterbody like this? <a href="${ES_SITE}" target="_blank" rel="noopener">Envirosonic can help ›</a></div>` : '';
   return `<div class="lp"><span class="chip" style="background:${COLOR[s.level]}">${LABEL[s.level]}</span>
     <br><b>${s.name}</b><div class="rg">${s.region} · ${s.authority}</div>
-    <div class="st">${s.status}</div><div class="dt">Updated ${s.updated} · <a href="${s.authorityUrl||'#'}" target="_blank" rel="noopener">source</a></div></div>`;
+    <div class="st">${s.status}</div><div class="dt">Updated ${s.updated} · <a href="${s.authorityUrl||'#'}" target="_blank" rel="noopener">source</a></div>${es}</div>`;
 }
-function drawMarkers(list){
+function drawMarkers(list, fallbackBounds){
   Object.values(markers).forEach(m=>map.removeLayer(m)); markers={};
   const pts=[];
   list.forEach(s=>{
@@ -430,29 +510,40 @@ function drawMarkers(list){
     markers[s.name]=m; pts.push([s.lat,s.lng]);
   });
   if(pts.length) map.fitBounds(pts,{padding:[50,50],maxZoom:7});
-  else if(vicBounds) map.fitBounds(vicBounds,{padding:[15,15]});
+  else map.fitBounds(fallbackBounds||HOME_BOUNDS,{padding:[15,15]});
 }
 function renderList(list){
   const order={red:0,amber:1,green:2};
   const el=document.getElementById('list');
   if(!list.length){ el.innerHTML='<p style="font-size:13px;color:var(--muted)">No current warnings for this selection.</p>'; return; }
-  el.innerHTML=[...list].sort((a,b)=>order[a.level]-order[b.level]).map(s=>
+  el.innerHTML=[...list].sort((a,b)=>order[a.level]-order[b.level]||stateOf(a).localeCompare(stateOf(b))).map(s=>
     `<div class="item ${s.level[0]}" data-nm="${s.name}"><span class="lvl ${s.level[0]}">${SHORT[s.level]}</span>
-     <div class="nm">${s.name}</div><div class="rg">${s.region}</div></div>`).join('');
+     <div class="nm">${s.name}</div><div class="rg">${s.region} · ${stateOf(s)}</div></div>`).join('');
   el.querySelectorAll('.item').forEach(it=>it.onclick=()=>{
     const s=DATA.warnings.find(x=>x.name===it.dataset.nm);
+    if(!s||s.lat==null) return;
     map.setView([s.lat,s.lng],10,{animate:true}); markers[s.name]&&markers[s.name].openPopup();
   });
 }
 function renderSources(){
   const labels={corp:'Water corporations & agencies', council:'Councils that issue their own warnings'};
-  let html='', lastKind='';
-  DATA.sources.forEach(s=>{
-    const kind=s.kind||'corp';
-    if(kind!==lastKind){ html+=`<div class="src-head">${labels[kind]||''}</div>`; lastKind=kind; }
-    const c = s.status==='warnings'?`${s.count} warning${s.count>1?'s':''}`:(s.status==='clear'?'Clear':'Check latest');
-    html+=`<div class="src"><span class="st ${s.status}"></span><div><div class="a">${s.authority}</div><div class="ar">${s.area}</div></div>
-      <a class="cnt" href="${s.url}" target="_blank" rel="noopener">${c} ›</a></div>`;
+  const byState={};
+  DATA.sources.filter(s=>!s.hidden).forEach(s=>{ const st=stateOf(s); (byState[st]=byState[st]||[]).push(s); });
+  const sel=document.getElementById('sf').value;
+  const codes=Object.keys(STATES).filter(c=>byState[c]).concat(Object.keys(byState).filter(c=>!STATES[c]));
+  let html='';
+  codes.forEach((code,i)=>{
+    const rows=byState[code]; const warn=rows.reduce((n,s)=>n+(s.status==='warnings'?s.count||0:0),0);
+    let body='', lastKind='';
+    rows.forEach(s=>{
+      const kind=s.kind||'corp';
+      if(kind!==lastKind){ body+=`<div class="src-head">${labels[kind]||''}</div>`; lastKind=kind; }
+      const c = s.status==='warnings'?`${s.count} warning${s.count>1?'s':''}`:(s.status==='clear'?'Clear':'Check latest');
+      body+=`<div class="src"><span class="st ${s.status}"></span><div><div class="a">${s.authority}</div><div class="ar">${s.area}</div></div>
+        <a class="cnt" href="${s.url}" target="_blank" rel="noopener">${c} ›</a></div>`;
+    });
+    const open = sel==='all' ? i===0 : sel===code;
+    html+=`<details class="stgrp"${open?' open':''}><summary>${stateName(code)}<span class="n${warn?' r':''}">${warn?warn+' warning'+(warn>1?'s':''):rows.length+' sources'}</span></summary><div class="body">${body}</div></details>`;
   });
   document.getElementById('sources').innerHTML=html;
 }
@@ -464,19 +555,61 @@ function renderNews(){
 function tallies(list){const c={red:0,amber:0,green:0};list.forEach(s=>c[s.level]++);tR.textContent=c.red;tA.textContent=c.amber;tG.textContent=c.green;}
 
 function buildFilter(){
-  const rf=document.getElementById('rf');
-  [...new Set(DATA.warnings.map(w=>w.region))].sort().forEach(r=>rf.insertAdjacentHTML('beforeend',`<option>${r}</option>`));
-  rf.onchange=apply;
+  const sf=document.getElementById('sf'), rf=document.getElementById('rf');
+  sf.innerHTML='<option value="all">All states</option>';
+  Object.keys(STATES).forEach(c=>sf.insertAdjacentHTML('beforeend',`<option value="${c}">${STATES[c].name}</option>`));
+  const qs=new URLSearchParams(location.search).get('state'); if(qs&&STATES[qs.toUpperCase()]) sf.value=qs.toUpperCase();
+  sf.onchange=()=>{fillRegions();apply();}; rf.onchange=apply; fillRegions();
+}
+function fillRegions(){
+  const sf=document.getElementById('sf'), rf=document.getElementById('rf');
+  const st=sf.value;
+  const regs = st==='all' ? [...new Set(DATA.warnings.map(w=>w.region))].sort()
+             : (STATES[st]?STATES[st].regions:[]);
+  rf.innerHTML='<option value="all">'+(st==='all'?'All regions':'All of '+stateName(st))+'</option>'+regs.map(r=>`<option>${r}</option>`).join('');
 }
 function apply(){
-  const v=document.getElementById('rf').value;
-  const list=v==='all'?DATA.warnings:DATA.warnings.filter(w=>w.region===v);
-  drawMarkers(list); tallies(list); renderList(list);
+  const st=document.getElementById('sf').value, rg=document.getElementById('rf').value;
+  let list=DATA.warnings;
+  if(st!=='all') list=list.filter(w=>stateOf(w)===st);
+  if(rg!=='all') list=list.filter(w=>w.region===rg);
+  const fb = st!=='all' && stateLayers[st] ? stateLayers[st].getBounds() : HOME_BOUNDS;
+  drawMarkers(list, fb); tallies(list); renderList(list); renderSources();
+  document.getElementById('brandSub').textContent=(st==='all'?'Australia':stateName(st))+' · live bloom map';
+  document.getElementById('heroTitle').textContent='Is the water safe? Blue-green algae warnings across '+(st==='all'?'Australia':stateName(st));
 }
 function renderAll(){
+  const reds=DATA.warnings.filter(w=>w.level==='red');
+  const perState=Object.keys(STATES).map(c=>{const n=reds.filter(w=>stateOf(w)===c).length;return n?`${c} ${n}`:null;}).filter(Boolean).join(' · ');
   document.getElementById('updated').innerHTML=
-    `<span class="live"></span>Live snapshot — <b>updated ${DATA.updatedLabel}</b>. Next weekly update: ${DATA.nextUpdate}.`;
-  buildFilter(); apply(); renderSources(); renderNews();
+    `<span class="live"></span>Live snapshot — <b>updated ${DATA.updatedLabel}</b>. ${reds.length} waterbod${reds.length===1?'y':'ies'} under warning${perState?' ('+perState+')':''}. Next update: ${DATA.nextUpdate}.`;
+  buildFilter(); apply(); renderNews(); buildSignup();
+}
+
+/* ---- Get alerts panel ---- */
+const MAX_REGIONS=3;
+function openPanel(){document.getElementById('alertpanel').classList.add('on');document.getElementById('em').focus();setTimeout(()=>map.invalidateSize(),100);}
+function closePanel(){document.getElementById('alertpanel').classList.remove('on');setTimeout(()=>map.invalidateSize(),100);}
+document.getElementById('openAlerts').onclick=openPanel;
+document.getElementById('sideAlerts').onclick=openPanel;
+document.getElementById('closeAlerts').onclick=closePanel;
+function buildSignup(){
+  const ss=document.getElementById('ss');
+  ss.innerHTML='<option value="">Choose…</option>'+Object.keys(STATES).map(c=>`<option value="${c}">${STATES[c].name}</option>`).join('');
+  const cur=document.getElementById('sf').value; if(cur!=='all') ss.value=cur;
+  ss.onchange=fillSignupRegions; fillSignupRegions();
+}
+function fillSignupRegions(){
+  const st=document.getElementById('ss').value, box=document.getElementById('regs');
+  if(!st){ box.innerHTML='<span style="font-size:12px;color:var(--muted)">Pick a state first.</span>'; return; }
+  box.innerHTML=STATES[st].regions.map(r=>`<label><input type="checkbox" name="regions[]" value="${st}: ${r}">${r}</label>`).join('');
+  const update=()=>{
+    const on=[...box.querySelectorAll('input:checked')];
+    box.querySelectorAll('label').forEach(l=>{const i=l.querySelector('input');l.classList.toggle('on',i.checked);l.classList.toggle('off',!i.checked&&on.length>=MAX_REGIONS);});
+    document.getElementById('regCount').textContent=on.length?`(${on.length} of ${MAX_REGIONS} chosen)`:`(choose up to ${MAX_REGIONS})`;
+  };
+  box.querySelectorAll('input').forEach(i=>i.onchange=e=>{ if(i.checked&&box.querySelectorAll('input:checked').length>MAX_REGIONS){i.checked=false;} update(); });
+  update();
 }
 
 /* tabs */
@@ -491,7 +624,9 @@ document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{
 /* Netlify Forms — AJAX submit so the visitor stays on the map */
 document.getElementById('signupForm').addEventListener('submit',e=>{
   e.preventDefault();
-  const f=e.target, data=new URLSearchParams(new FormData(f)).toString();
+  const f=e.target;
+  if(!f.querySelector('#regs input:checked')){ alert('Choose at least one region.'); return; }
+  const data=new URLSearchParams(new FormData(f)).toString();
   fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:data})
     .then(()=>{document.getElementById('ok').style.display='block';f.reset();})
     .catch(()=>{document.getElementById('ok').style.display='block';f.reset();}); // local preview: still confirm
@@ -711,8 +846,10 @@ Promise.all([
   fetch('insights.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null)
 ]).then(([h,i])=>{ if(h)HIST=h; if(i)INS=i; renderInsights(); }).catch(()=>renderInsights());
 
-/* load live feed, fall back to embedded snapshot */
-fetch('data.json',{cache:'no-store'})
+/* load the state/region list, then the live feed; fall back to embedded snapshots */
+fetch('sources.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null)
+  .then(s=>{ if(s&&s.states) STATES=s.states; })
+  .then(()=>fetch('data.json',{cache:'no-store'}))
   .then(r=>{if(!r.ok)throw 0;return r.json();})
   .then(d=>{DATA=d;renderAll();})
   .catch(()=>renderAll());

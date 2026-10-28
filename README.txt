@@ -1,64 +1,78 @@
-BLUE-GREEN ALGAE ALERT — VICTORIA MAP
-=====================================
+BLUE-GREEN ALGAE ALERT — algaealert.com.au
+==========================================
 
 WHAT THIS IS
-A self-contained blue-green algae map and information site for Victoria.
-Victoria's coastline is bundled in, so the map always draws (with pins)
-even before OpenStreetMap tiles load. The alert data lives in data.json,
-which a weekly scraper refreshes.
+A single-page map of current blue-green algae warnings across Australia,
+published by Envirosonic. Stage 1 (October 2026) covers Victoria, New South
+Wales and Queensland. The page reads two files: sources.json (the states,
+regions and every page we check) and data.json (this week's warnings, source
+statuses and news). Netlify deploys the repo on every push to main.
 
 WHAT'S ON IT
-- Live map + current warnings (colour-coded: Warning / Amber / Clear).
-- "Sources monitored" — every Victorian authority we check, with status:
-  Goulburn-Murray Water, GWMWater, Lower Murray Water, Southern Rural Water,
-  Melbourne Water (metro), Gippsland Lakes (coastal), and local councils.
-- Updates tab — recent alert activity and Victorian media coverage.
-- Report & rules tab — who to notify if you find a bloom (by situation),
-  plus links to the Blue-Green Algae Circular, the Safe Drinking Water Act,
-  EPA reporting and Better Health guidance.
-- "Get alerts" signup wired to Netlify Forms (see below).
-- A "last updated / next weekly update" date stamped across the top.
+- Live map with an Australia outline, pins coloured Warning / Reported / Clear,
+  and a State + Region filter. ?state=NSW in the URL preselects a state.
+- Current warnings list and a Sources panel grouped by state (the selected
+  state is expanded, the others collapsed).
+- "Get alerts for your area": a header button opens a panel with email, state,
+  who you are, and up to three regions (checkbox chips, name="regions[]").
+  Submissions land in Netlify Forms under "algae-alerts".
+- Sponsor strip for Envirosonic under the header, and a one-line footer on
+  every red warning popup.
+- History tab (Victorian record, 2020 onwards), Updates tab, Report & rules tab.
 
-CURRENT DATA
-See data.json (updatedLabel) for the date of the latest weekly update.
-Coordinates are approximate to each waterbody.
+HOW THE WEEKLY UPDATE WORKS (two steps)
+1. GitHub Action ".github/workflows/fetch-sources.yml" runs scrape/fetch.js
+   every Thursday 19:00 UTC (Friday morning Melbourne). It downloads every page
+   in sources.json, strips it to text, writes snapshots/<id>.txt, and records a
+   hash per source in snapshots/index.json with the date it last changed. If the
+   WATERNSW_API_KEY repository secret is set it also pulls the last 21 days of
+   algal samples from the WaterNSW Water Quality API into snapshots/nsw-api.json.
+   The Action commits the snapshots folder.
+2. A Claude scheduled task ("Algae Alert weekly update", Friday 8:37am
+   Melbourne) clones the repo, reads snapshots/index.json, and reads in full
+   only the sources whose hash changed since its last run. For unchanged
+   sources it carries last week's status forward. It applies the 60-day rule
+   (a warning counts only if the authority's own page says it is current, and
+   nothing older than 60 days or from a news article is a warning), writes
+   data.json with a state on every warning and source, folds red warnings into
+   history.json, commits and pushes. That push is the deploy.
 
-DEPLOY TO NETLIFY
-1. app.netlify.com > "Add new site" > "Deploy manually".
-2. Drag this whole folder onto the drop zone.
-3. Point bluegreenalgaealert.com.au at it under Site settings > Domain.
-Netlify auto-detects the signup form (see next section).
+To add a state: add it to sources.json (states + its sources with state, region,
+type and notes), add coordinates to GEOCODE in scrape/scrape.js as warnings
+appear, and the map, filters and signup form pick it up without code changes.
 
-THE SIGNUP FORM (NETLIFY FORMS) — now wired up
-The form is tagged for Netlify Forms (data-netlify), so once deployed,
-every submission is captured under your site's "Forms" tab and Netlify can
-email you each one (Site settings > Forms > Form notifications). No server
-needed. It submits via AJAX so the visitor stays on the map. To send actual
-alert emails later, connect the form to Mailchimp or similar. NOTE: Netlify
-only registers the form on a real deploy — it won't "work" when you open the
-file locally (it just shows the confirmation).
+FILES
+- index.html         the page (CSS and JS inline; Leaflet in /vendor)
+- sources.json       states, regions, and every source page with reading notes
+- data.json          this week's warnings, sources and news (schema below)
+- snapshots/         text copies of every source page + index.json (hashes)
+- history.json       the historical event record; insights.json its summary
+- scrape/fetch.js    the fetch-and-diff script run by the Action
+- scrape/scrape.js   kept for GEOCODE (coordinates) and accrueHistory() only;
+                     its page parsers are retired and must not build data.json
+- vendor/australia-geo.js   simplified state outlines (window.AU_GEO)
+- COUNCILS.txt       background notes on which Victorian councils issue warnings
 
-WEEKLY UPDATE (Claude scheduled task)
-The weekly update is now a Claude scheduled task, not the GitHub Action.
-Each week it reads every water corporation and council page in the sources
-list itself, applies the 60-day rule (a warning goes on the map only if the
-managing authority's own page says it is current; undated or stale pages are
-shown as "Check latest"), and writes and pushes data.json to main, which
-Netlify deploys. scrape.js is kept only for its GEOCODE coordinates table
-and the accrueHistory function that folds each week's red warnings into
-history.json; its page parsers are no longer used. The GitHub workflow is
-left for manual dispatch only and no longer runs on a schedule.
+data.json SCHEMA
+{ updated: "2026-10-28", updatedLabel: "28 Oct 2026", nextUpdate: "04 Nov 2026",
+  warnings: [{ name, state: "VIC|NSW|QLD", region (one of the state's regions in
+               sources.json), authority, authorityUrl, level: "red|amber",
+               status, updated, lat, lng }],
+  sources:  [{ authority, area, kind: "corp|council", state, status:
+               "warnings|clear|manual", count, url }],
+  news:     [{ title, source, date, url }] }
 
-EDITING DATA BY HAND (if you skip the scraper)
-Open data.json and edit the "warnings", "sources" and "news" arrays, and the
-"updatedLabel" / "nextUpdate" dates. The map picks it up on next load.
+SIGNUP FORM AND ALERT EMAILS
+Netlify Forms captures each submission (email, state, role, regions[]). Sending
+the actual alert emails is a stage 2 item: a step at the end of the scheduled
+task compares this week's red warnings with last week's and emails subscribers
+whose regions match. Until then, export subscribers from Netlify > Forms.
 
-SOURCES
-- Goulburn-Murray Water: g-mwater.com.au/water-operations/bga
-- GWMWater: gwmwater.org.au/using-lakes-and-reservoirs/rec-algae-warnings
-- Lower Murray Water: lmw.vic.gov.au/.../blue-green-algae
-- Southern Rural Water: srw.com.au/water-and-storage/warnings/blue-green-algae
-- Melbourne Water: melbournewater.com.au
-- DEECA overview: water.vic.gov.au/waterways/blue-green-algae
-- Health / reporting: health.vic.gov.au/water/blue-green-algae-management
-- EPA pollution hotline: 1300 372 842
+SOURCES (see sources.json for the full list with URLs and notes)
+Victoria: Goulburn-Murray Water, GWMWater, Lower Murray Water, Southern Rural
+  Water, Melbourne Water, DEECA (Gippsland Lakes), Coliban Water, Barwon Water,
+  and 19 councils that issue their own warnings.
+NSW: WaterNSW algae alerts (map plus dated Red/Amber/Green alert pages), the
+  Water Quality API (cross-check), Regional Algal Coordinating Committee reports.
+Queensland: Sunwater recreation and safety alerts (dated posts, RSS),
+  Seqwater blue-green algae levels (17 lakes, level shown as an image).
