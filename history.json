@@ -1,8 +1,8 @@
 {
-  "generated": "2026-10-27",
+  "generated": "2026-10-29",
   "coverage_start": "2020-02-13",
-  "coverage_end": "2026-10-27",
-  "event_count": 65,
+  "coverage_end": "2026-10-29",
+  "event_count": 68,
   "undated_count": 1,
   "note": "Historical record — NOT current status. Reconstructed from dated authority notices, government reports and news. Confidence flagged per event.",
   "events": [
@@ -1581,6 +1581,78 @@
       "source_url": "https://www.srw.com.au/water-and-storage/warnings/blue-green-algae",
       "source_urls": [
         "https://www.srw.com.au/water-and-storage/warnings/blue-green-algae"
+      ],
+      "confidence": "high",
+      "_managed": true,
+      "notes": "Detected by the weekly scraper from the authority warnings page."
+    },
+    {
+      "id": "sunwater-cania-dam-2026-10",
+      "waterbody": "Cania Dam",
+      "lat": -24.69,
+      "lng": 150.98,
+      "authority": "Sunwater",
+      "region": "Wide Bay & Burnett",
+      "level": "warning",
+      "cell_count_max": null,
+      "cell_count_avg": null,
+      "start_date": "2026-10-29",
+      "end_date": null,
+      "duration_days": null,
+      "year": 2026,
+      "season": "spring",
+      "source_type": "authority-scraper",
+      "source_url": "https://www.sunwater.com.au/2026/10/02/cania-dam-blue-green-algae-alert-5/",
+      "source_urls": [
+        "https://www.sunwater.com.au/2026/10/02/cania-dam-blue-green-algae-alert-5/"
+      ],
+      "confidence": "high",
+      "_managed": true,
+      "notes": "Detected by the weekly scraper from the authority warnings page."
+    },
+    {
+      "id": "sunwater-julius-dam-2026-10",
+      "waterbody": "Julius Dam",
+      "lat": -20.13,
+      "lng": 139.72,
+      "authority": "Sunwater",
+      "region": "North West & Gulf",
+      "level": "warning",
+      "cell_count_max": null,
+      "cell_count_avg": null,
+      "start_date": "2026-10-29",
+      "end_date": null,
+      "duration_days": null,
+      "year": 2026,
+      "season": "spring",
+      "source_type": "authority-scraper",
+      "source_url": "https://www.sunwater.com.au/2026/10/23/julius-dam-blue-green-algae-alert-3/",
+      "source_urls": [
+        "https://www.sunwater.com.au/2026/10/23/julius-dam-blue-green-algae-alert-3/"
+      ],
+      "confidence": "high",
+      "_managed": true,
+      "notes": "Detected by the weekly scraper from the authority warnings page."
+    },
+    {
+      "id": "sunwater-wuruma-dam-2026-10",
+      "waterbody": "Wuruma Dam",
+      "lat": -25.07,
+      "lng": 150.99,
+      "authority": "Sunwater",
+      "region": "Wide Bay & Burnett",
+      "level": "warning",
+      "cell_count_max": null,
+      "cell_count_avg": null,
+      "start_date": "2026-10-29",
+      "end_date": null,
+      "duration_days": null,
+      "year": 2026,
+      "season": "spring",
+      "source_type": "authority-scraper",
+      "source_url": "https://www.sunwater.com.au/2026/09/18/wuruma-dam-blue-green-algae-alert-3/",
+      "source_urls": [
+        "https://www.sunwater.com.au/2026/09/18/wuruma-dam-blue-green-algae-alert-3/"
       ],
       "confidence": "high",
       "_managed": true,

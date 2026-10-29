@@ -51,7 +51,9 @@ const GEOCODE = {
   'caulfield park lake':[-37.878,145.023], 'lake daylesford':[-37.348,144.148], 'jubilee lake':[-37.36,144.17],
   'lake colac':[-38.283,143.633], 'green hill lake':[-37.284,142.928], 'gippsland lakes':[-37.88,147.75],
   // Added Oct 2026 weekly update
-  'merrimu reservoir':[-37.62,144.52], 'lake bullen merri':[-38.25,143.10]
+  'merrimu reservoir':[-37.62,144.52], 'lake bullen merri':[-38.25,143.10],
+  // Added 29 Oct 2026 (Queensland)
+  'julius dam':[-20.13,139.72], 'cania dam':[-24.69,150.98], 'wuruma dam':[-25.07,150.99], 'lake wyaralong':[-27.97,152.87]
 };
 const coordsFor = (name) => GEOCODE[name.trim().toLowerCase()] || [null, null];
 

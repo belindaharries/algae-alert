@@ -1,13 +1,13 @@
 {
-  "generated": "2026-10-27",
+  "generated": "2026-10-29",
   "coverage_years": [
     2020,
     2026
   ],
   "coverage_note": "Reconstructed from dated authority notices, government reports and news for 2020–2026. Earlier years and less-publicised lakes are under-counted; treat counts as a floor, not a census.",
   "totals": {
-    "events": 65,
-    "waterbodies": 34,
+    "events": 68,
+    "waterbodies": 37,
     "undated_known_blooms": 1,
     "events_with_known_duration": 17
   },
@@ -18,13 +18,13 @@
     "2023": 10,
     "2024": 13,
     "2025": 23,
-    "2026": 9
+    "2026": 12
   },
   "season_histogram": {
     "summer": 26,
     "autumn": 28,
     "winter": 3,
-    "spring": 8
+    "spring": 11
   },
   "month_histogram": {
     "Jan": 11,
@@ -36,7 +36,7 @@
     "Jul": 2,
     "Aug": 1,
     "Sep": 0,
-    "Oct": 4,
+    "Oct": 7,
     "Nov": 4,
     "Dec": 5
   },
@@ -135,7 +135,7 @@
       0,
       0,
       0,
-      2,
+      5,
       0,
       0
     ]
@@ -1056,6 +1056,75 @@
       "years_active_count": 1,
       "first_seen": "2026-10-27",
       "last_seen": "2026-10-27",
+      "recurring": false,
+      "avg_duration_days": null,
+      "max_duration_days": null,
+      "typical_season": "spring",
+      "typical_months": [
+        "Oct",
+        "Oct"
+      ],
+      "best_confidence": "high"
+    },
+    {
+      "waterbody": "Cania Dam",
+      "lat": -24.69,
+      "lng": 150.98,
+      "region": "Wide Bay & Burnett",
+      "authority": "Sunwater",
+      "event_count": 1,
+      "years_active": [
+        2026
+      ],
+      "years_active_count": 1,
+      "first_seen": "2026-10-29",
+      "last_seen": "2026-10-29",
+      "recurring": false,
+      "avg_duration_days": null,
+      "max_duration_days": null,
+      "typical_season": "spring",
+      "typical_months": [
+        "Oct",
+        "Oct"
+      ],
+      "best_confidence": "high"
+    },
+    {
+      "waterbody": "Julius Dam",
+      "lat": -20.13,
+      "lng": 139.72,
+      "region": "North West & Gulf",
+      "authority": "Sunwater",
+      "event_count": 1,
+      "years_active": [
+        2026
+      ],
+      "years_active_count": 1,
+      "first_seen": "2026-10-29",
+      "last_seen": "2026-10-29",
+      "recurring": false,
+      "avg_duration_days": null,
+      "max_duration_days": null,
+      "typical_season": "spring",
+      "typical_months": [
+        "Oct",
+        "Oct"
+      ],
+      "best_confidence": "high"
+    },
+    {
+      "waterbody": "Wuruma Dam",
+      "lat": -25.07,
+      "lng": 150.99,
+      "region": "Wide Bay & Burnett",
+      "authority": "Sunwater",
+      "event_count": 1,
+      "years_active": [
+        2026
+      ],
+      "years_active_count": 1,
+      "first_seen": "2026-10-29",
+      "last_seen": "2026-10-29",
       "recurring": false,
       "avg_duration_days": null,
       "max_duration_days": null,
