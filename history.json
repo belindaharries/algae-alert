@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-12",
+  "generated": "2026-11-19",
   "coverage_start": "2020-02-13",
   "coverage_end": "2026-10-29",
   "event_count": 68,
@@ -1387,7 +1387,8 @@
       ],
       "confidence": "high",
       "sources_merged": 3,
-      "notes": "GMW notice dated 22 Jan 2026, high levels detected. Still listed as an active warning on the GMW alert page (last updated 17 Jul 2026), so end left null."
+      "notes": "GMW notice dated 22 Jan 2026, high levels detected. Still listed as an active warning on the GMW alert page (last updated 17 Jul 2026), so end left null.",
+      "_managed": true
     },
     {
       "id": "yarra-ra-lillydale-lake-2026-02",
