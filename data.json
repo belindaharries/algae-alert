@@ -1,7 +1,7 @@
 {
-  "updated": "2026-11-12",
-  "updatedLabel": "12 Nov 2026",
-  "nextUpdate": "19 Nov 2026",
+  "updated": "2026-11-19",
+  "updatedLabel": "19 Nov 2026",
+  "nextUpdate": "26 Nov 2026",
   "warnings": [
     {
       "name": "Lake Boga",
@@ -10,8 +10,8 @@
       "authority": "Goulburn-Murray Water",
       "authorityUrl": "https://www.g-mwater.com.au/water-operations/bga",
       "level": "red",
-      "status": "Goulburn-Murray Water is warning the public to avoid contact with the water after monitoring detected high levels of blue-green algae. Warning signs are at major recreation areas; use alternative supplies for stock drinking and keep stock and pets away from the water. Warning issued 22 October 2026 and still listed as current at the 6 November 2026 update.",
-      "updated": "6 Nov 2026",
+      "status": "Goulburn-Murray Water is warning the public to avoid contact with water in Lake Boga after monitoring detected high levels of blue-green algae. Warning signs are at major recreation areas; use alternative supplies for stock drinking, keep stock and pets away from the water and avoid watering edible garden plants. Warning issued 22 October 2026 and still listed as current at the 19 November 2026 update.",
+      "updated": "19 Nov 2026",
       "lat": -35.46,
       "lng": 143.63
     },
@@ -22,10 +22,22 @@
       "authority": "Goulburn-Murray Water",
       "authorityUrl": "https://www.g-mwater.com.au/water-operations/bga",
       "level": "red",
-      "status": "Goulburn-Murray Water is warning the public to avoid contact with water in Lake Eildon. Warning signs are in place at major recreation areas; the warning is isolated to Lake Eildon and there is not currently a warning for the Goulburn River downstream. Still listed as a current warning at the 6 November 2026 update.",
-      "updated": "6 Nov 2026",
+      "status": "Goulburn-Murray Water is warning the public to avoid contact with water in Lake Eildon after monitoring detected high levels of blue-green algae. Warning signs are in place at major recreation areas; the warning is isolated to Lake Eildon and there is currently no warning for the Goulburn River downstream. Still listed as a current warning at the 19 November 2026 update.",
+      "updated": "19 Nov 2026",
       "lat": -37.23,
       "lng": 145.91
+    },
+    {
+      "name": "Tullaroop Reservoir",
+      "state": "VIC",
+      "region": "Central Highlands",
+      "authority": "Goulburn-Murray Water",
+      "authorityUrl": "https://www.g-mwater.com.au/water-operations/bga",
+      "level": "red",
+      "status": "Goulburn-Murray Water is warning the public to avoid contact with water in Tullaroop Reservoir after monitoring detected high levels of blue-green algae. Warning signs are being placed at major recreation areas; use alternative supplies for stock drinking, keep stock and pets away from the water and avoid watering edible garden plants. Warning issued 19 November 2026.",
+      "updated": "19 Nov 2026",
+      "lat": -37.13,
+      "lng": 143.79
     },
     {
       "name": "Merrimu Reservoir",
@@ -34,7 +46,7 @@
       "authority": "Southern Rural Water",
       "authorityUrl": "https://www.srw.com.au/water-and-storage/warnings/blue-green-algae",
       "level": "red",
-      "status": "Southern Rural Water says there is a blue-green algae warning currently in place at Merrimu Reservoir and advises avoiding contact with the water. The page states all warnings on it are current and are updated only when the situation changes; no issue date is given. Still listed on 12 November 2026.",
+      "status": "Southern Rural Water says there is a blue-green algae warning currently in place at Merrimu Reservoir and advises avoiding contact with the water. The page states all warnings on it are current and are updated only when the situation changes; no issue date is given. First seen 12 November 2026 and still listed on 19 November 2026.",
       "updated": "12 Nov 2026",
       "lat": -37.62,
       "lng": 144.52
@@ -58,7 +70,7 @@
       "authority": "Sunwater",
       "authorityUrl": "https://www.sunwater.com.au/2026/10/23/julius-dam-blue-green-algae-alert-3/",
       "level": "red",
-      "status": "Sunwater has a Red Alert in place: avoid direct contact with the water including swimming and recreational activities, do not consume untreated water, avoid areas with visible surface scums, and avoid eating mussels, redclaw or fish from the dam. Issued 23 October 2026; no later post has lifted it. The recreation area and boat ramp are also closed from 3 November for upgrade works.",
+      "status": "Sunwater has a Red Alert in place: avoid direct contact with the water including swimming and recreational activities, do not consume untreated water, avoid areas with visible surface scums, and avoid eating mussels, redclaw or fish from the dam. Issued 23 October 2026; no later post has lifted it. The recreation area and boat ramp are also closed from 3 November for upgrade works. No later Sunwater post had lifted the alert as at 19 November 2026.",
       "updated": "23 Oct 2026",
       "lat": -20.13,
       "lng": 139.72
@@ -70,7 +82,7 @@
       "authority": "Sunwater",
       "authorityUrl": "https://www.sunwater.com.au/2026/10/30/cania-dam-blue-green-algae-alert-5/",
       "level": "red",
-      "status": "Sunwater says a Red Alert remains in place (Update 2, 30 October 2026): avoid direct contact with the water including swimming and recreational activities, do not consume untreated water, avoid areas with visible surface scums, and avoid eating mussels, redclaw or fish from the dam. The alert was first issued on 2 October 2026.",
+      "status": "Sunwater says a Red Alert remains in place (Update 2, 30 October 2026): avoid direct contact with the water including swimming and recreational activities, do not consume untreated water, avoid areas with visible surface scums, and avoid eating mussels, redclaw or fish from the dam. The alert was first issued on 2 October 2026. No later Sunwater post had lifted the alert as at 19 November 2026.",
       "updated": "30 Oct 2026",
       "lat": -24.69,
       "lng": 150.98
@@ -82,7 +94,7 @@
       "authority": "Sunwater",
       "authorityUrl": "https://www.sunwater.com.au/2026/10/30/wuruma-dam-blue-green-algae-alert-4/",
       "level": "red",
-      "status": "Sunwater says a Red Alert is now in place (Update 1, 30 October 2026): avoid direct contact with the water including swimming and recreational activities, do not consume untreated water, keep livestock and pets away from surface scums, and avoid eating mussels, redclaw or fish from the dam.",
+      "status": "Sunwater says a Red Alert is now in place (Update 1, 30 October 2026): avoid direct contact with the water including swimming and recreational activities, do not consume untreated water, keep livestock and pets away from surface scums, and avoid eating mussels, redclaw or fish from the dam. No later Sunwater post had lifted the alert as at 19 November 2026.",
       "updated": "30 Oct 2026",
       "lat": -25.07,
       "lng": 150.99
@@ -94,22 +106,10 @@
       "authority": "Seqwater",
       "authorityUrl": "https://www.seqwater.com.au/blue-green-algae-levels",
       "level": "amber",
-      "status": "Seqwater shows blue-green algae at a medium level at Lake Wyaralong. The lake is open to all permitted water-based activities; electric boats only, no fuel-powered vessels. The page gives no date; medium level first seen 29 October 2026 and still shown on 12 November 2026.",
+      "status": "Seqwater shows blue-green algae at a medium level at Lake Wyaralong. The lake is open to all permitted water-based activities; electric boats only, no fuel-powered vessels. The page gives no date; medium level first seen 29 October 2026 and still shown on 19 November 2026.",
       "updated": "29 Oct 2026",
       "lat": -27.97,
       "lng": 152.87
-    },
-    {
-      "name": "Lake Bullen Merri",
-      "state": "VIC",
-      "region": "South-west Victoria",
-      "authority": "DEECA (investigating)",
-      "authorityUrl": "https://www.standard.net.au/story/9378808/lake-bullen-merri-camperdown-hit-by-suspected-algae-outbreak/",
-      "level": "amber",
-      "status": "Reported 23 Oct 2026 via The Standard (Warrnambool). Verify current status with the managing authority.",
-      "updated": "23 Oct 2026",
-      "lat": -38.25,
-      "lng": 143.1
     }
   ],
   "sources": [
@@ -119,7 +119,7 @@
       "kind": "corp",
       "state": "VIC",
       "status": "warnings",
-      "count": 2,
+      "count": 3,
       "url": "https://www.g-mwater.com.au/water-operations/bga"
     },
     {
@@ -395,16 +395,22 @@
   ],
   "news": [
     {
-      "title": "8 waterbodies under an active warning: VIC 4, NSW 0, QLD 4",
+      "title": "9 waterbodies under an active warning: VIC 5, NSW 0, QLD 4",
       "source": "Weekly update",
-      "date": "12 Nov 2026",
+      "date": "19 Nov 2026",
       "url": "https://www.algaealert.com.au"
     },
     {
-      "title": "Goulburn-Murray Water blue-green algae status updated: warnings remain at Lake Boga and Lake Eildon",
+      "title": "Goulburn-Murray Water issues blue-green algae warning for Tullaroop Reservoir; Lake Boga and Lake Eildon warnings remain",
       "source": "Goulburn-Murray Water",
-      "date": "6 Nov 2026",
+      "date": "19 Nov 2026",
       "url": "https://www.g-mwater.com.au/water-operations/bga"
+    },
+    {
+      "title": "Southern Rural Water: blue-green algae warning remains in place at Merrimu Reservoir",
+      "source": "Southern Rural Water",
+      "date": "19 Nov 2026",
+      "url": "https://www.srw.com.au/water-and-storage/warnings/blue-green-algae"
     },
     {
       "title": "Wuruma Dam | Blue-green algae alert (Red Alert, Update 1)",
@@ -417,30 +423,6 @@
       "source": "Sunwater",
       "date": "30 Oct 2026",
       "url": "https://www.sunwater.com.au/2026/10/30/cania-dam-blue-green-algae-alert-5/"
-    },
-    {
-      "title": "Julius Dam | Blue-green algae alert (Red Alert)",
-      "source": "Sunwater",
-      "date": "23 Oct 2026",
-      "url": "https://www.sunwater.com.au/2026/10/23/julius-dam-blue-green-algae-alert-3/"
-    },
-    {
-      "title": "Lake Bullen Merri, Camperdown, hit by suspected algae outbreak",
-      "source": "The Standard (Warrnambool)",
-      "date": "23 Oct 2026",
-      "url": "https://www.standard.net.au/story/9378808/lake-bullen-merri-camperdown-hit-by-suspected-algae-outbreak/"
-    },
-    {
-      "title": "Blue-green algae warning for Lake Boga",
-      "source": "Gannawarra Times",
-      "date": "23 Oct 2026",
-      "url": "https://gannawarratimes.com.au/news/2026/10/23/blue-green-algae-warning-for-lake-boga/"
-    },
-    {
-      "title": "Algae warning for Lake Boga (Mildura-Swan Hill and Wimmera local news briefing)",
-      "source": "ABC News",
-      "date": "23 Oct 2026",
-      "url": "https://www.abc.net.au/news/2026-10-23/mildura-swan-hill-and-wimmera-local-news-briefing/107299394"
     }
   ]
 }
